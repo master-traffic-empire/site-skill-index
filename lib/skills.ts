@@ -27,6 +27,7 @@ export interface Skill {
   related_slugs: string[]
   personas: string[]
   category: string | null
+  business_category: string | null
 }
 
 export interface Plugin {
@@ -105,9 +106,35 @@ export const CATEGORIES = [
   { slug: "fun", label: "Fun" },
 ] as const
 
+export const BUSINESS_CATEGORIES = [
+  { slug: "content-copywriting", label: "Content & copywriting" },
+  { slug: "email-marketing", label: "Email marketing" },
+  { slug: "social-media", label: "Social media" },
+  { slug: "seo-search", label: "SEO & search" },
+  { slug: "ads-paid-media", label: "Ads & paid media" },
+  { slug: "sales-funnels", label: "Sales & funnels" },
+  { slug: "branding-design-biz", label: "Branding & design" },
+  { slug: "finance-pricing", label: "Finance & pricing" },
+  { slug: "legal-compliance", label: "Legal & compliance" },
+  { slug: "operations-systems", label: "Operations & systems" },
+  { slug: "hr-team", label: "HR & team" },
+  { slug: "client-consulting", label: "Client & consulting" },
+  { slug: "courses-education", label: "Courses & education" },
+  { slug: "events-speaking", label: "Events & speaking" },
+  { slug: "launch-growth", label: "Launch & growth" },
+  { slug: "analytics-data-biz", label: "Analytics & data" },
+  { slug: "ecommerce-products", label: "Ecommerce & products" },
+  { slug: "industry-specific", label: "Industry-specific" },
+  { slug: "ai-technology-biz", label: "AI & technology" },
+  { slug: "nonprofit-community", label: "Nonprofit & community" },
+] as const
+
 export function skillsForPersona(slug: string): Skill[] {
   return allSkills().filter(s => s.personas?.includes(slug))
 }
 export function skillsForCategory(slug: string): Skill[] {
   return allSkills().filter(s => s.category === slug)
+}
+export function skillsForBusinessCategory(slug: string): Skill[] {
+  return allSkills().filter(s => s.business_category === slug)
 }

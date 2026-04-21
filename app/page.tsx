@@ -6,8 +6,10 @@ import {
   allPlugins,
   PERSONAS,
   CATEGORIES,
+  BUSINESS_CATEGORIES,
   skillsForPersona,
   skillsForCategory,
+  skillsForBusinessCategory,
 } from "../lib/skills"
 import { SkillCard } from "../components/SkillCard"
 import { SkillSearch } from "../components/SkillSearch"
@@ -67,7 +69,7 @@ export default function Home() {
   return (
     <main className="home">
       {/* HERO */}
-      <section className="home-hero">
+      <section className="home-hero hero-grid-bg">
         <div
           className="hero-img-bg"
           aria-hidden="true"
@@ -80,6 +82,10 @@ export default function Home() {
           <RevealTitle text="The archive of Claude Code skills." />
           <p className="hero-sub">
             $ grep -r &quot;claude skill&quot; . | wc -l <span className="amber">// {skillCount}</span>
+          </p>
+          <p className="hero-metaphor">
+            Skills are <em>recipes</em>, not prompts. Step-by-step instructions Claude follows
+            every time — asks the right questions, uses the right structure, ships quality output.
           </p>
           <div className="hero-stats">
             <div>
@@ -96,6 +102,31 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* DEMO MOCK */}
+      <section className="demo-mock" aria-label="Example skill invocation">
+        <div className="demo-header">
+          <span className="demo-avatar">C</span>
+          <div>
+            <div className="demo-name">Claude</div>
+            <div className="demo-meta"><span className="amber">●</span> {skillCount} skills ready</div>
+          </div>
+          <span className="demo-badge">claude.code</span>
+        </div>
+        <div className="demo-user">I need to draft a 2-paragraph ADR for swapping our Redis cache for Valkey.</div>
+        <div className="demo-skill-pill"><span className="amber">⚡</span> using <span className="mono">superpowers/writing-plans</span> skill</div>
+        <div className="demo-reply">
+          <p>Quick prerequisites:</p>
+          <ol>
+            <li>What prompted the swap — cost, licensing, features?</li>
+            <li>Which services currently depend on Redis commands?</li>
+            <li>Is there a migration deadline?</li>
+            <li>Who needs to approve this ADR?</li>
+          </ol>
+          <p>Then I&apos;ll draft the ADR — context, decision, consequences, alternatives considered. ~3 min.</p>
+        </div>
+        <div className="demo-saved">✓ saved you <span className="amber">45 minutes</span></div>
       </section>
 
       {/* SEARCH */}
@@ -141,7 +172,25 @@ export default function Home() {
             return (
               <li key={c.slug}>
                 <Link href={`/categories/${c.slug}`} className="cat-chip">
-                  {c.label} <span className="c">{n}</span>
+                  {c.label} <span className="chip-count">{n}</span>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </section>
+
+      {/* BUSINESS FUNCTIONS */}
+      <section aria-label="By business function">
+        <h3 className="section-h">by business function</h3>
+        <ul className="cat-row">
+          {BUSINESS_CATEGORIES.map(b => {
+            const n = skillsForBusinessCategory(b.slug).length
+            if (n === 0) return null
+            return (
+              <li key={b.slug}>
+                <Link href={`/biz/${b.slug}`} className="cat-chip">
+                  {b.label} <span className="chip-count">{n}</span>
                 </Link>
               </li>
             )

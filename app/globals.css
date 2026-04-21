@@ -541,6 +541,204 @@ main {
 }
 .cat-chip:hover { color: var(--c-amber); border-color: var(--c-amber); }
 .cat-chip .c { color: var(--c-amber); }
+.cat-chip .chip-count,
+.persona-chip-row li a .chip-count {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.4rem;
+  background: var(--c-amber);
+  color: #0A0906;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 0.2rem;
+}
+
+/* ----- hero metaphor ----- */
+.hero-metaphor {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--c-text-muted);
+  max-width: 58ch;
+  margin: 1rem 0 2rem;
+  line-height: 1.55;
+}
+.hero-metaphor em {
+  color: var(--c-amber);
+  font-style: italic;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+}
+
+/* ----- graph-paper grid on hero ----- */
+.hero-grid-bg { position: relative; }
+.hero-grid-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    linear-gradient(var(--c-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--c-line) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.35;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  pointer-events: none;
+}
+
+/* ----- persona outcome bullets + quote ----- */
+.persona-outcomes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 2rem;
+  margin: 2rem 0;
+  max-width: 720px;
+  padding: 0;
+}
+@media (max-width: 720px) {
+  .persona-outcomes { grid-template-columns: 1fr; }
+}
+.persona-outcomes li {
+  list-style: none;
+  font-family: var(--font-body);
+  color: var(--c-text);
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.persona-outcomes li::before {
+  content: "✓";
+  color: var(--c-amber);
+  font-weight: 700;
+}
+.persona-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--c-text);
+  max-width: 620px;
+  margin: 2.5rem auto;
+  text-align: center;
+  font-variation-settings: "SOFT" 50, "WONK" 1;
+  line-height: 1.35;
+  border-top: 1px solid var(--c-line);
+  border-bottom: 1px solid var(--c-line);
+  padding: 1.5rem 0;
+  position: relative;
+}
+.persona-quote::before {
+  content: "❝";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--c-bg);
+  padding: 0 0.5rem;
+  color: var(--c-amber);
+  font-style: normal;
+}
+
+/* ----- demo mock / chat hero visual ----- */
+.demo-mock {
+  max-width: 640px;
+  margin: 3rem auto;
+  padding: 1.75rem 1.5rem 1.5rem;
+  background: var(--c-bg-elev);
+  border: 1px dashed var(--c-line-strong);
+  position: relative;
+  font-family: var(--font-body);
+}
+.demo-mock::before {
+  content: "EXAMPLE SKILL INVOCATION";
+  position: absolute;
+  top: -9px;
+  left: 16px;
+  background: var(--c-bg);
+  padding: 0 8px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--c-text-muted);
+}
+.demo-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--c-line);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+.demo-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--c-amber);
+  color: #0A0906;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.demo-name {
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+.demo-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--c-text-muted);
+}
+.demo-meta .amber { color: var(--c-amber); }
+.demo-badge {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--c-text-muted);
+  border: 1px solid var(--c-line-strong);
+  padding: 0.1rem 0.4rem;
+}
+.demo-user {
+  background: var(--c-amber);
+  color: #0A0906;
+  padding: 0.8rem 1rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+.demo-skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1px solid var(--c-amber);
+  color: var(--c-amber);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.demo-skill-pill .amber { color: var(--c-amber); }
+.demo-skill-pill .mono { color: var(--c-turquoise); }
+.demo-reply {
+  background: var(--c-bg);
+  border: 1px solid var(--c-line);
+  padding: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.demo-reply p { margin: 0 0 0.6rem; }
+.demo-reply ol { padding-left: 1.25rem; margin: 0 0 0.6rem; }
+.demo-reply li { margin-bottom: 0.25rem; color: var(--c-text); }
+.demo-saved {
+  margin-top: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--c-text-muted);
+}
+.demo-saved .amber { color: var(--c-amber); }
 
 /* featured row — asymmetric staggered */
 .featured {
