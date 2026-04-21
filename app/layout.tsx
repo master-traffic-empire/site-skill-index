@@ -8,8 +8,14 @@ import "@base/styles/globals.css"
 
 const bodyFont = Inter({
   subsets: ["latin"],
-  variable: "--font-display --font-body",
+  variable: "--font-body",
   weight: ["300", "400", "500", "600", "700"],
+})
+
+const displayFont = Inter({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["600", "700", "800"],
 })
 
 const monoFont = JetBrains_Mono({
@@ -30,7 +36,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <RootLayout
       siteConfig={siteConfig}
-      fontVariables={`${bodyFont.variable} ${monoFont.variable}`}
+      fontVariables={`${bodyFont.variable} ${displayFont.variable} ${monoFont.variable}`}
     >
       {children}
     </RootLayout>
