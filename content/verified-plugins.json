@@ -1,0 +1,5 @@
+[
+  {"repo": "anthropics/claude-plugins-official", "reason": "official"},
+  {"repo": "davila7/claude-code-templates", "reason": "community-reference"},
+  {"repo": "hesreallyhim/awesome-claude-code", "reason": "curation-source"}
+]
