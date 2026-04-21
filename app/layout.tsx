@@ -9,7 +9,14 @@ const displayFont = Inter({ subsets: ["latin"], variable: "--font-display" })
 const bodyFont = Inter({ subsets: ["latin"], variable: "--font-body" })
 const monoFont = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
-export const metadata: Metadata = generateSiteMetadata(siteConfig)
+const baseMetadata = generateSiteMetadata(siteConfig)
+
+export const metadata: Metadata = {
+  ...baseMetadata,
+  verification: {
+    google: "imc5M3WIqJ7_32AR3Sf27VpNBQ32iHfU92VhObkdyKY",
+  },
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
