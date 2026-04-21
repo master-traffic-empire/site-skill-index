@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { siteConfig } from "../../site.config"
 import { allSkills } from "../../lib/skills"
-import { SkillCard } from "../../components/SkillCard"
+import { SkillSearch } from "../../components/SkillSearch"
 
 export const metadata: Metadata = {
   title: `All Claude Code skills | ${siteConfig.name}`,
@@ -14,9 +14,7 @@ export default function SkillsIndex() {
   return (
     <main className="skills-index">
       <h1>All skills ({skills.length})</h1>
-      <div className="skill-grid">
-        {skills.map(s => <SkillCard key={s.slug} skill={s} />)}
-      </div>
+      <SkillSearch skills={skills} />
     </main>
   )
 }

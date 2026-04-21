@@ -25,6 +25,8 @@ export interface Skill {
     age_days: number | null
   }
   related_slugs: string[]
+  personas: string[]
+  category: string | null
 }
 
 export interface Plugin {
@@ -74,4 +76,38 @@ export function getPlugin(slug: string): Plugin | undefined {
 
 export function generatedAt(): string {
   return index.generated_at
+}
+
+export const PERSONAS = [
+  { slug: "graphic-designers", label: "Graphic designers" },
+  { slug: "architects", label: "Architects" },
+  { slug: "content-creators", label: "Content creators" },
+  { slug: "frontend-developers", label: "Frontend developers" },
+  { slug: "backend-engineers", label: "Backend engineers" },
+  { slug: "ml-engineers", label: "ML engineers" },
+  { slug: "devops-engineers", label: "DevOps engineers" },
+  { slug: "data-analysts", label: "Data analysts" },
+  { slug: "founders", label: "Founders" },
+  { slug: "marketers", label: "Marketers" },
+  { slug: "students", label: "Students" },
+] as const
+
+export const CATEGORIES = [
+  { slug: "development", label: "Development" },
+  { slug: "design", label: "Design" },
+  { slug: "writing", label: "Writing" },
+  { slug: "data", label: "Data" },
+  { slug: "devops", label: "DevOps" },
+  { slug: "learning", label: "Learning" },
+  { slug: "productivity", label: "Productivity" },
+  { slug: "research", label: "Research" },
+  { slug: "marketing", label: "Marketing" },
+  { slug: "fun", label: "Fun" },
+] as const
+
+export function skillsForPersona(slug: string): Skill[] {
+  return allSkills().filter(s => s.personas?.includes(slug))
+}
+export function skillsForCategory(slug: string): Skill[] {
+  return allSkills().filter(s => s.category === slug)
 }

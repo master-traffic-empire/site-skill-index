@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 import { siteConfig } from "../site.config"
-import { allSkills, allPlugins, generatedAt } from "../lib/skills"
+import { allSkills, allPlugins, generatedAt, PERSONAS, CATEGORIES } from "../lib/skills"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const gen = new Date(generatedAt())
@@ -24,5 +24,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: p.verified ? 0.9 : 0.5,
     })
   }
+  for (const p of PERSONAS) out.push({ url: `${base}/for/${p.slug}`, lastModified: gen, priority: 0.8 })
+  for (const c of CATEGORIES) out.push({ url: `${base}/categories/${c.slug}`, lastModified: gen, priority: 0.8 })
+  out.push({ url: `${base}/for`, lastModified: gen, priority: 0.8 })
+  out.push({ url: `${base}/categories`, lastModified: gen, priority: 0.8 })
   return out
 }

@@ -1,7 +1,7 @@
 import Link from "next/link"
 import type { Metadata } from "next"
 import { siteConfig } from "../site.config"
-import { allSkills, allPlugins } from "../lib/skills"
+import { allSkills, allPlugins, PERSONAS, CATEGORIES, skillsForPersona, skillsForCategory } from "../lib/skills"
 import { SkillCard } from "../components/SkillCard"
 
 export const metadata: Metadata = {
@@ -29,6 +29,26 @@ export default function Home() {
         <div className="skill-grid">
           {featured.map(s => <SkillCard key={s.slug} skill={s} />)}
         </div>
+      </section>
+      <section aria-label="By audience">
+        <h2>For</h2>
+        <ul className="persona-chip-row">
+          {PERSONAS.map(p => (
+            <li key={p.slug}>
+              <Link href={`/for/${p.slug}`}>{p.label} <span>({skillsForPersona(p.slug).length})</span></Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+      <section aria-label="By category">
+        <h2>By category</h2>
+        <ul className="persona-chip-row">
+          {CATEGORIES.map(c => (
+            <li key={c.slug}>
+              <Link href={`/categories/${c.slug}`}>{c.label} <span>({skillsForCategory(c.slug).length})</span></Link>
+            </li>
+          ))}
+        </ul>
       </section>
     </main>
   )

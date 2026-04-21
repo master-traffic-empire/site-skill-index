@@ -27,6 +27,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <nav>
             <Link href="/skills">Skills</Link>
             <Link href="/plugins">Plugins</Link>
+            <Link href="/for">For</Link>
+            <Link href="/categories">Categories</Link>
             <a href={`https://github.com/master-traffic-empire/site-skill-index`} rel="noopener">GitHub</a>
           </nav>
         </header>
