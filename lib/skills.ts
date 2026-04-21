@@ -1,0 +1,77 @@
+import indexData from "../content/skills-index.json"
+
+export interface Skill {
+  slug: string
+  name: string
+  plugin_slug: string
+  type: "skill" | "command"
+  description: string
+  invocation_triggers: string | string[] | null
+  readme_markdown: string
+  frontmatter_raw: Record<string, unknown>
+  file_path: string
+  repo: string
+  verified: boolean
+  github: {
+    stars: number
+    last_commit_at: string | null
+    license: string | null
+    contributors_count: number
+  }
+  trust_signals: {
+    readme_length: number
+    frontmatter_completeness: number
+    stars: number
+    age_days: number | null
+  }
+  related_slugs: string[]
+}
+
+export interface Plugin {
+  slug: string
+  repo: string
+  verified: boolean
+  skills: Skill[]
+  stars: number
+  last_commit_at: string | null
+}
+
+const index = indexData as { generated_at: string; count: number; records: Skill[] }
+
+export function allSkills(): Skill[] {
+  return index.records
+}
+
+export function getSkill(pluginSlug: string, name: string): Skill | undefined {
+  return index.records.find(r => r.plugin_slug === pluginSlug && r.name === name)
+}
+
+export function allPlugins(): Plugin[] {
+  const bySlug = new Map<string, Plugin>()
+  for (const r of index.records) {
+    const existing = bySlug.get(r.plugin_slug)
+    if (existing) {
+      existing.skills.push(r)
+      continue
+    }
+    bySlug.set(r.plugin_slug, {
+      slug: r.plugin_slug,
+      repo: r.repo,
+      verified: r.verified,
+      skills: [r],
+      stars: r.github?.stars ?? 0,
+      last_commit_at: r.github?.last_commit_at ?? null,
+    })
+  }
+  return [...bySlug.values()].sort((a, b) =>
+    Number(b.verified) - Number(a.verified) || b.stars - a.stars
+  )
+}
+
+export function getPlugin(slug: string): Plugin | undefined {
+  return allPlugins().find(p => p.slug === slug)
+}
+
+export function generatedAt(): string {
+  return index.generated_at
+}
