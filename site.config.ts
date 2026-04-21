@@ -1,27 +1,31 @@
-// site.config.ts — Builder agent populates this per site
-// All other files import from here — never hardcode values.
-
 import type { SiteConfig } from "@base/types"
 
 export const siteConfig: SiteConfig = {
-  slug: "PLACEHOLDER",
-  name: "PLACEHOLDER",
-  tagline: "PLACEHOLDER",
-  description: "PLACEHOLDER",
-  domain: "PLACEHOLDER.thicket.sh",
-  baseUrl: "https://PLACEHOLDER.thicket.sh",
-  category: "PLACEHOLDER",
+  slug: "skill-index",
+  name: "Skill Index",
+  tagline: "Every Claude Code skill, one install command away",
+  description: "Browse and install Claude Code skills and slash commands. 500+ plugins indexed from GitHub — verified official plugins plus the wider community, with trust signals, source links, and copy-paste install commands.",
+  domain: "skills.thicket.sh",
+  baseUrl: "https://skills.thicket.sh",
+  category: "content",
 
-  primaryKeyword: "PLACEHOLDER",
-  targetKeywords: [],
+  primaryKeyword: "claude code skills",
+  targetKeywords: [
+    "claude code skills",
+    "claude code plugins",
+    "claude code skill install",
+    "install claude skill",
+    "claude skill directory",
+    "superpowers skill",
+  ],
   twitterHandle: "",
 
   colors: {
-    primary: "#0F172A",
-    secondary: "#6366F1",
+    primary: "#0B0F19",
+    secondary: "#7C3AED",
     accent: "#22D3EE",
     surface: "#F8FAFC",
-    surfaceDark: "#0F172A",
+    surfaceDark: "#0B0F19",
     text: "#1E293B",
     textMuted: "#64748B",
     border: "#E2E8F0",
@@ -46,7 +50,7 @@ export const siteConfig: SiteConfig = {
   },
 
   blog: {
-    enabled: true,
+    enabled: false,
     basePath: "/blog",
   },
 
