@@ -292,7 +292,7 @@ export default async function Home() {
           <div><span className="mono-lbl">articles</span><span className="colo-n">{articleCount}</span></div>
           <div><span className="mono-lbl">verified</span><span className="colo-n">{verifiedCount}</span></div>
         </div>
-        <p className="colo-note">Maintained by a cron job. Last pipeline refresh {formatDate(gen)}. Source on <a href="https://github.com/master-traffic-empire/site-skill-index" rel="noopener">GitHub</a>.</p>
+        <p className="colo-note">Maintained by a cron job. Last pipeline refresh {formatDate(gen)}.</p>
       </section>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{

@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/for">for</Link>
             <Link href="/biz">biz</Link>
             <Link href="/categories">categories</Link>
-            <a href="https://github.com/master-traffic-empire/site-skill-index" rel="noopener">github ↗</a>
+            <Link href="/blog">blog</Link>
           </nav>
         </header>
         {children}
