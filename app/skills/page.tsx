@@ -13,7 +13,10 @@ export default function SkillsIndex() {
   const skills = allSkills()
   return (
     <main className="skills-index">
-      <h1>All skills ({skills.length})</h1>
+      <h1 className="idx-h1">All skills</h1>
+      <p className="idx-sub">
+        <span className="amber">{skills.length}</span> indexed // every claude code skill &amp; slash command
+      </p>
       <SkillSearch skills={skills} />
     </main>
   )

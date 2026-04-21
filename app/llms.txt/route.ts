@@ -17,7 +17,7 @@ export async function GET() {
 
 ## Verified Claude Code skills & commands
 
-${verified.map(s => `- [${s.plugin_slug}/${s.name}](${siteConfig.baseUrl}/skills/${s.plugin_slug}/${s.name}): ${s.description} (install: \`/plugin install ${s.plugin_slug}\`)`).join("\n")}
+${verified.map(s => `- [${s.plugin_slug}/${s.name}](${siteConfig.baseUrl}/skills/${s.plugin_slug}/${s.name}): ${s.description ?? ""} (install: \`/plugin install ${s.plugin_slug}\`)`).join("\n")}
 
 ## Collections
 

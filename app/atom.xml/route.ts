@@ -17,7 +17,7 @@ ${items.map(s => `<entry>
   <link href="${siteConfig.baseUrl}/skills/${s.plugin_slug}/${s.name}"/>
   <id>${siteConfig.baseUrl}/skills/${s.plugin_slug}/${s.name}</id>
   <updated>${s.github.last_commit_at ?? generatedAt()}</updated>
-  <summary><![CDATA[${s.description}]]></summary>
+  <summary><![CDATA[${s.description ?? ""}]]></summary>
 </entry>`).join("\n")}
 </feed>`
   return new Response(xml, { headers: { "Content-Type": "application/atom+xml; charset=utf-8" } })

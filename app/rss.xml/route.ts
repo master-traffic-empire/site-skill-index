@@ -17,7 +17,7 @@ ${items.map(s => `<item>
   <title><![CDATA[${s.plugin_slug}/${s.name}]]></title>
   <link>${siteConfig.baseUrl}/skills/${s.plugin_slug}/${s.name}</link>
   <guid>${siteConfig.baseUrl}/skills/${s.plugin_slug}/${s.name}</guid>
-  <description><![CDATA[${s.description}]]></description>
+  <description><![CDATA[${s.description ?? ""}]]></description>
   <pubDate>${s.github.last_commit_at ? new Date(s.github.last_commit_at).toUTCString() : new Date(generatedAt()).toUTCString()}</pubDate>
 </item>`).join("\n")}
 </channel></rss>`

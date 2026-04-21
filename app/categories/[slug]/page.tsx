@@ -30,9 +30,17 @@ export default async function CategoryPage({ params }: Props) {
   const skills = skillsForCategory(slug)
   return (
     <main>
-      <nav className="breadcrumb"><Link href="/">Home</Link> / <Link href="/categories">Categories</Link> / {c.label}</nav>
-      <h1>{c.label} skills</h1>
-      <p className="lede">{skills.length} Claude Code {c.label.toLowerCase()} skill{skills.length === 1 ? "" : "s"}.</p>
+      <nav className="breadcrumb">
+        <Link href="/">home</Link>
+        <span className="sep">/</span>
+        <Link href="/categories">categories</Link>
+        <span className="sep">/</span>
+        {c.label.toLowerCase()}
+      </nav>
+      <h1 className="idx-h1">{c.label}</h1>
+      <p className="idx-sub">
+        <span className="amber">{skills.length}</span> skills // {c.label.toLowerCase()} category
+      </p>
       <div className="skill-grid">
         {skills.map(s => <SkillCard key={s.slug} skill={s} />)}
       </div>

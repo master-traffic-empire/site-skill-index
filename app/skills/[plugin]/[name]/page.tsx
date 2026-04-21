@@ -20,9 +20,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title = `${skill.name} — ${skill.type === "command" ? "Claude Code slash command" : "Claude Code skill"}`
   return {
     title: `${title} | ${siteConfig.name}`,
-    description: skill.description,
+    description: skill.description ?? "",
     alternates: { canonical: `${siteConfig.baseUrl}/skills/${plugin}/${name}` },
-    openGraph: { title, description: skill.description, type: "article" },
+    openGraph: { title, description: skill.description ?? "", type: "article" },
   }
 }
 
@@ -39,58 +39,68 @@ export default async function SkillPage({ params }: Props) {
   return (
     <main className="skill-detail">
       <nav className="breadcrumb">
-        <Link href="/">Home</Link> / <Link href="/skills">Skills</Link> /{" "}
-        <Link href={`/plugins/${skill.plugin_slug}`}>{skill.plugin_slug}</Link> / {skill.name}
+        <Link href="/">home</Link>
+        <span className="sep">/</span>
+        <Link href="/skills">skills</Link>
+        <span className="sep">/</span>
+        <Link href={`/plugins/${skill.plugin_slug}`}>{skill.plugin_slug}</Link>
+        <span className="sep">/</span>
+        {skill.name}
       </nav>
-      <header>
-        <h1>{skill.name}</h1>
-        {skill.verified
-          ? <span className="badge badge-verified">Verified</span>
-          : <span className="badge badge-community">Community</span>}
-        <span className="type-tag">{skill.type}</span>
-      </header>
-      <p className="lede">{skill.description}</p>
 
-      <section aria-label="Install">
-        <h2>Install</h2>
-        <InstallCommand cmd={installCmd} />
-      </section>
+      <p className="meta-line">{skill.plugin_slug}/</p>
+      <h1>{skill.name}</h1>
+      <div className="tag-row">
+        {skill.verified
+          ? <span className="tag tag-ok">OK · verified</span>
+          : <span className="tag tag-community">community</span>}
+        <span className="tag tag-type">[{skill.type}]</span>
+      </div>
+      <p className="lede">{skill.description ?? ""}</p>
+
+      <InstallCommand cmd={installCmd} />
 
       {skill.invocation_triggers && (
         <section aria-label="When it runs">
-          <h2>When to use</h2>
+          <h2 className="sec-h">when to use</h2>
           {Array.isArray(skill.invocation_triggers)
-            ? <ul>{skill.invocation_triggers.map(t => <li key={t}>{t}</li>)}</ul>
+            ? <ul className="when-list">{skill.invocation_triggers.map(t => <li key={t}>{t}</li>)}</ul>
             : <p>{skill.invocation_triggers}</p>}
         </section>
       )}
 
       <section aria-label="Details">
-        <h2>Details</h2>
+        <h2 className="sec-h">details</h2>
         <Markdown>{skill.readme_markdown}</Markdown>
       </section>
 
       <TrustSignals skill={skill} />
 
       <section aria-label="Technical">
-        <h2>Technical</h2>
-        <dl>
-          <dt>GitHub</dt><dd><a href={`https://github.com/${skill.repo}/blob/HEAD/${skill.file_path}`} rel="noopener">{skill.repo}</a></dd>
-          <dt>Stars</dt><dd>{skill.github.stars}</dd>
-          <dt>License</dt><dd>{skill.github.license ?? "unspecified"}</dd>
-          <dt>Contributors</dt><dd>{skill.github.contributors_count}</dd>
-          <dt>Last commit</dt><dd>{skill.github.last_commit_at ?? "unknown"}</dd>
+        <h2 className="sec-h">technical</h2>
+        <dl className="tech-dl">
+          <dt>github</dt>
+          <dd>
+            <a href={`https://github.com/${skill.repo}/blob/HEAD/${skill.file_path}`} rel="noopener">
+              {skill.repo}
+            </a>
+          </dd>
+          <dt>stars</dt><dd>{skill.github.stars}</dd>
+          <dt>license</dt><dd>{skill.github.license ?? "unspecified"}</dd>
+          <dt>contributors</dt><dd>{skill.github.contributors_count}</dd>
+          <dt>last commit</dt><dd>{skill.github.last_commit_at ?? "unknown"}</dd>
+          <dt>file</dt><dd>{skill.file_path}</dd>
         </dl>
       </section>
 
       {related.length > 0 && (
         <section aria-label="Related">
-          <h2>Related skills</h2>
-          <ul>
+          <h2 className="sec-h">related</h2>
+          <ul className="related-list">
             {related.map(r => (
               <li key={r.slug}>
                 <Link href={`/skills/${r.plugin_slug}/${r.name}`}>{r.plugin_slug}/{r.name}</Link>
-                {" — "}{r.description}
+                <span className="related-desc">— {r.description ?? ""}</span>
               </li>
             ))}
           </ul>
@@ -104,7 +114,7 @@ export default async function SkillPage({ params }: Props) {
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
             "name": skill.name,
-            "description": skill.description,
+            "description": skill.description ?? "",
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },

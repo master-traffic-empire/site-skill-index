@@ -12,14 +12,19 @@ export const metadata: Metadata = {
 export default function CategoriesIndex() {
   return (
     <main>
-      <h1>Skill categories</h1>
-      <ul className="persona-list">
+      <h1 className="idx-h1">Skill categories</h1>
+      <p className="idx-sub">
+        <span className="amber">{CATEGORIES.length}</span> categories // browse by topic
+      </p>
+      <ul className="idx-grid">
         {CATEGORIES.map(c => {
           const count = skillsForCategory(c.slug).length
           return (
             <li key={c.slug}>
-              <Link href={`/categories/${c.slug}`}>{c.label}</Link>
-              <span>— {count} skill{count === 1 ? "" : "s"}</span>
+              <Link href={`/categories/${c.slug}`} className="idx-card">
+                <span className="idx-card-name">{c.label}</span>
+                <span className="idx-card-count">{count} skills</span>
+              </Link>
             </li>
           )
         })}

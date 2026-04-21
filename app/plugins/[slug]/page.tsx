@@ -30,22 +30,27 @@ export default async function PluginPage({ params }: Props) {
 
   return (
     <main className="plugin-detail">
-      <nav className="breadcrumb"><Link href="/">Home</Link> / <Link href="/plugins">Plugins</Link> / {slug}</nav>
-      <header>
-        <h1>{slug}</h1>
-        {plugin.verified
-          ? <span className="badge badge-verified">Verified</span>
-          : <span className="badge badge-community">Community</span>}
-        <a href={`https://github.com/${plugin.repo}`} rel="noopener">{plugin.repo}</a>
-      </header>
+      <nav className="breadcrumb">
+        <Link href="/">home</Link>
+        <span className="sep">/</span>
+        <Link href="/plugins">plugins</Link>
+        <span className="sep">/</span>
+        {slug}
+      </nav>
 
-      <section aria-label="Install">
-        <h2>Install</h2>
-        <InstallCommand cmd={`/plugin install ${slug}`} />
-      </section>
+      <h1>{slug}</h1>
+      <a href={`https://github.com/${plugin.repo}`} rel="noopener" className="plugin-repo">{plugin.repo} ↗</a>
+      <div className="tag-row">
+        {plugin.verified
+          ? <span className="tag tag-ok">OK · verified</span>
+          : <span className="tag tag-community">community</span>}
+        <span className="tag tag-type">[{plugin.skills.length} items]</span>
+      </div>
+
+      <InstallCommand cmd={`/plugin install ${slug}`} />
 
       <section aria-label="Contents">
-        <h2>{plugin.skills.length} item{plugin.skills.length === 1 ? "" : "s"}</h2>
+        <h2 className="sec-h">contents</h2>
         <div className="skill-grid">
           {plugin.skills.map(s => <SkillCard key={s.slug} skill={s} />)}
         </div>
