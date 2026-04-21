@@ -1,0 +1,25 @@
+{
+  "slug": "new-claude-code-plugins-this-week",
+  "title": "5 New Claude Code Plugins That Shipped This Week",
+  "description": "The verified Claude Code plugins with commits in the last 14 days \u2014 including a major Superpowers update, myclaude's latest drop, and a new humanizer skill. What's fresh, what's worth installing.",
+  "content": "<p>Fresh Claude Code releases are a decent leading indicator of where the ecosystem is heading. The five verified plugins below all shipped commits in the last two weeks, and each one is actively used by enough people to matter. Ranked by activity, not raw stars.</p><h2>1. superpowers \u2014 Anthropic (Obra)</h2><p>The flagship. Last commit: 3 days ago. 162,164 stars. Ships 14 skills focused on engineering discipline \u2014 systematic debugging, plan writing and execution, parallel agent dispatching, code review, worktree isolation. The most recent updates tightened the plan-execution loop and improved the parallel-agents handoff protocol.</p><p><strong>What's new:</strong> smoother subagent coordination, cleaner plan-execution checkpoints.</p><p><a href=\"/plugins/superpowers\">See plugin page \u2192</a></p><h2>2. myclaude \u2014 third-party, verified</h2><p>Last commit: 10 days ago. 2,606 stars. 14 skills. Less prescriptive than superpowers, more utility-focused. The recent release broadened the test-cases skill to handle more function signatures and improved the <code>omo</code> helper.</p><p><strong>What's new:</strong> expanded test-cases generator, omo tweaks.</p><p><a href=\"/plugins/myclaude\">See plugin page \u2192</a></p><h2>3. cli \u2014 community</h2><p>Last commit: 3 days ago. 321 stars. 10 skills focused on command-line interop \u2014 web scraping with firecrawl-download, file munging, CLI automation. Quietly one of the most useful plugins for anyone doing ops-adjacent Claude work.</p><p><strong>What's new:</strong> firecrawl-download stability fixes.</p><p><a href=\"/plugins/cli\">See plugin page \u2192</a></p><h2>4. higgsfield-seedance2-jineng</h2><p>Last commit: 10 days ago. 236 stars. 15 skills around video prompt engineering \u2014 comic-to-video, animated comics, Seedance 2 workflows. Niche but deep; if you're producing short-form video from static sources this is the plugin to watch.</p><p><strong>What's new:</strong> Seedance 2 prompt formatting.</p><p><a href=\"/plugins/higgsfield-seedance2-jineng\">See plugin page \u2192</a></p><h2>5. humanizer-skill \u2014 small-but-useful</h2><p>Last commit: 2 days ago. 6 stars. A single skill that strips AI-writing tells from drafts. Small plugin, but shipping this week, and it does one thing well. Good candidate for a quick install while the larger <code>humanizer</code> plugin (14,689 stars) remains the fuller option.</p><p><strong>What's new:</strong> initial public release is still maturing \u2014 keep an eye on it.</p><p><a href=\"/plugins/humanizer-skill\">See plugin page \u2192</a></p><h2>How this list was built</h2><p>Filtered to verified plugins, last commit within 14 days, deduplicated to one entry per plugin regardless of how many skills it bundles. Sort is by commit recency first, then plugin-level stars. The filter excludes anything we can't verify \u2014 lots of cool unverified plugins exist, but this list is for things that passed the audit.</p><p>We run this pipeline weekly; next week's shortlist will look different. If you want the raw data, every skill page shows its <code>last_commit_at</code> and star history.</p>",
+  "author": {
+    "name": "Skill Index Editorial"
+  },
+  "publishedAt": "2026-04-20",
+  "updatedAt": "2026-04-20",
+  "image": {
+    "url": "/images/blog/new-claude-code-plugins-this-week.webp",
+    "alt": "Terminal archive card listing five new Claude Code plugins from this week",
+    "width": 1200,
+    "height": 1200
+  },
+  "category": "New This Week",
+  "tags": [
+    "new-this-week",
+    "plugins",
+    "claude-code"
+  ],
+  "readingTime": 4,
+  "featured": true
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "10-claude-code-skills-every-developer-should-install-first",
+  "title": "The 10 Claude Code Skills Every Developer Should Install First",
+  "description": "A starter pack for anyone new to Claude Code plugins. Ten verified skills that cover debugging, testing, UI, docs, git, and the engineering meta-skills that make Claude a disciplined collaborator.",
+  "content": "<p>The Claude Code plugin marketplace has 800+ skills. You do not need all of them. If you're starting from scratch, these ten cover the highest-leverage work \u2014 the ones that make the difference between Claude-as-autocomplete and Claude-as-collaborator. Install them in order; the earlier ones matter more.</p><h2>1. systematic-debugging \u2014 Superpowers</h2><p>Hypothesis-and-test debugging instead of random log shotguns. The one skill that pays for its install the first time you use it. 162,164 stars.</p><p><a href=\"/skills/superpowers/systematic-debugging\">Learn more \u2192</a></p><h2>2. verification-before-completion \u2014 Superpowers</h2><p>Claude runs the tests and shows the output before claiming done. Eliminates the single biggest category of \"it looked fixed\" bugs.</p><p><a href=\"/skills/superpowers/verification-before-completion\">Learn more \u2192</a></p><h2>3. test-driven-development \u2014 Superpowers</h2><p>Writes the failing test first, runs it, implements, confirms green. The habit Claude ought to have by default.</p><p><a href=\"/skills/superpowers/test-driven-development\">Learn more \u2192</a></p><h2>4. writing-plans \u2014 Superpowers</h2><p>Forces a spec-before-code step for any non-trivial task. Saves the \"three hours in and realized we're building the wrong thing\" moment.</p><p><a href=\"/skills/superpowers/writing-plans\">Learn more \u2192</a></p><h2>5. executing-plans \u2014 Superpowers</h2><p>The matched pair to writing-plans. Works through a written plan with checkpoints, stopping when something's off instead of bulldozing through.</p><p><a href=\"/skills/superpowers/executing-plans\">Learn more \u2192</a></p><h2>6. requesting-code-review \u2014 Superpowers</h2><p>Structured self-review before you open a PR. Catches issues that'd otherwise get caught by someone else \u2014 or worse, production.</p><p><a href=\"/skills/superpowers/requesting-code-review\">Learn more \u2192</a></p><h2>7. frontend-design \u2014 Anthropic</h2><p>If you touch UI, install this. Lifts the baseline quality of generated components by a real margin. 17,453 stars.</p><p><a href=\"/skills/frontend-design/frontend-design\">Learn more \u2192</a></p><h2>8. webapp-testing \u2014 Anthropic (skills plugin)</h2><p>Drive a real browser for end-to-end tests. Part of the flagship 121,347-star skills plugin.</p><p><a href=\"/skills/skills/webapp-testing\">Learn more \u2192</a></p><h2>9. using-git-worktrees \u2014 Superpowers</h2><p>When Claude needs to work on multiple things in parallel, worktrees keep them from stepping on each other. Essential for any multi-agent setup, useful for solo too.</p><p><a href=\"/skills/superpowers/using-git-worktrees\">Learn more \u2192</a></p><h2>10. doc-coauthoring \u2014 Anthropic (skills plugin)</h2><p>The docs you're not writing because \"it's just a small change\" are the reason your future self hates your past self. This skill makes it easy enough that you'll actually do it.</p><p><a href=\"/skills/skills/doc-coauthoring\">Learn more \u2192</a></p><h2>Install order, and why</h2><p>Install in order. Skills 1-6 change how Claude works \u2014 they're process skills. Once those are in place, your baseline session quality is measurably better. Skills 7-10 add specific capabilities on top. If you do it the other way around, you'll have great tools driven by a sloppy process, and the results will be uneven.</p><p>Total install time: about 10 minutes. Total install commands: 10, one per skill, each one copy-paste from the skill's detail page.</p><h2>What's not on this list</h2><p>Video-prompt skills, image generation, specialist research tools. All good, none universal. This list is the floor \u2014 the skills every developer should have. Build up from here based on what you actually work on.</p>",
+  "author": {
+    "name": "Skill Index Editorial"
+  },
+  "publishedAt": "2026-04-20",
+  "updatedAt": "2026-04-20",
+  "image": {
+    "url": "/images/blog/10-claude-code-skills-every-developer-should-install-first.webp",
+    "alt": "Terminal archive card listing ten starter-pack Claude Code skills",
+    "width": 1200,
+    "height": 1200
+  },
+  "category": "Guides",
+  "tags": [
+    "starter-pack",
+    "listicle",
+    "skills",
+    "claude-code"
+  ],
+  "readingTime": 6,
+  "featured": true
+}

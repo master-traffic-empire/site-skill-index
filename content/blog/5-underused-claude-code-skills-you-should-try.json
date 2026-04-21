@@ -1,0 +1,26 @@
+{
+  "slug": "5-underused-claude-code-skills-you-should-try",
+  "title": "5 Claude Code Skills You're Probably Not Using \u2014 But Should Be",
+  "description": "Skip the obvious top-three. These five verified Claude Code skills sit in the middle of the leaderboard, and they solve real problems faster than the tools you're already reaching for.",
+  "content": "<p>The top three Claude Code plugins \u2014 <code>superpowers</code>, <code>skills</code>, and <code>gstack</code> \u2014 get all the attention, and deservedly so. But the interesting work is happening a few rows down. The skills below all come from verified plugins with meaningful stars, sit outside the obvious top three, and each one solves a problem that a lot of people still hand-roll or skip. Worth a try.</p><h2>1. defuddle \u2014 obsidian-skills</h2><p>If you save articles into Obsidian, defuddle turns them from \"saved but unread\" into actual notes. Strips the noise, pulls the argument, offers links to adjacent notes in your vault. 25,631 stars, verified. The kind of tool that pays back the install cost within a week.</p><p><strong>Why overlooked:</strong> lives in an Obsidian-specific plugin, so people outside the PKM world don't see it.</p><p><a href=\"/skills/obsidian-skills/defuddle\">Learn more \u2192</a></p><h2>2. claude-automation-recommender \u2014 claude-code-setup</h2><p>Reads your project, notices patterns, and suggests which parts of your workflow should be turned into hooks or automations. It's not flashy. It's the \"why didn't I think of that\" category. 17,453 stars, verified.</p><p><strong>Why overlooked:</strong> meta-tooling \u2014 skills about skills \u2014 is an acquired taste. Once you use it once, you'll wonder how you lived without it.</p><p><a href=\"/skills/claude-code-setup/claude-automation-recommender\">Learn more \u2192</a></p><h2>3. claude-md-improver \u2014 claude-md-management</h2><p>Your CLAUDE.md is probably 800 words of cruft accumulated over three months. This skill reads it, measures it against actual behavior across your recent sessions, and proposes specific edits. Verified, 17,453 stars.</p><p><strong>Why overlooked:</strong> most people write their CLAUDE.md once and forget it exists until Claude does something surprising. By then the file is a liability, not an asset.</p><p><a href=\"/skills/claude-md-management/claude-md-improver\">Learn more \u2192</a></p><h2>4. skill-creator \u2014 skill-creator plugin</h2><p>The skill for creating skills. If you keep telling Claude the same thing across sessions, you should probably be writing a skill instead. This one scaffolds the right folder structure, the YAML frontmatter, the whole shape. Verified, 17,453 stars.</p><p><strong>Why overlooked:</strong> most users don't realize they're allowed to write their own skills. You are. And you should.</p><p><a href=\"/skills/skill-creator/skill-creator\">Learn more \u2192</a></p><h2>5. session-report \u2014 session-report plugin</h2><p>At the end of a work session, generates a structured summary \u2014 what was done, what was attempted, what failed, what's next. Drops neatly into a commit message or a standup. Verified, 17,453 stars.</p><p><strong>Why overlooked:</strong> the value only becomes obvious when you haven't used it for a week and can't remember what you did last Tuesday.</p><p><a href=\"/skills/session-report/session-report\">Learn more \u2192</a></p><h2>The pattern</h2><p>Every skill on this list is about closing a reflective loop \u2014 reviewing the session, tightening the CLAUDE.md, creating a skill from a repeated pattern. The obvious top-tier skills help you do work. These help you notice what work is worth doing. Together they compound.</p><p>Pick one. Install it. Use it twice. If it doesn't stick, uninstall and try the next. The point of a plugin marketplace is low switching cost.</p>",
+  "author": {
+    "name": "Skill Index Editorial"
+  },
+  "publishedAt": "2026-04-20",
+  "updatedAt": "2026-04-20",
+  "image": {
+    "url": "/images/blog/5-underused-claude-code-skills-you-should-try.webp",
+    "alt": "Terminal archive card of five underused Claude Code skills with amber accents",
+    "width": 1200,
+    "height": 1200
+  },
+  "category": "Discovery",
+  "tags": [
+    "discovery",
+    "hidden-gems",
+    "skills",
+    "claude-code"
+  ],
+  "readingTime": 4,
+  "featured": false
+}

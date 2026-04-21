@@ -1,0 +1,26 @@
+{
+  "slug": "best-claude-code-skills-for-graphic-designers",
+  "title": "The 7 Best Claude Code Skills for Graphic Designers",
+  "description": "Brand guidelines, canvas design, image generation, and theme systems \u2014 the Claude Code skills designers actually reach for. All verified, all one install command away.",
+  "content": "<p>The Claude Code ecosystem is heavier on engineering skills than design skills, but the design skills that exist are surprisingly good \u2014 especially the ones Anthropic ships in its flagship plugin. Below are the seven most useful Claude Code skills for graphic designers in 2026, covering branding, asset generation, and design systems.</p><h2>1. brand-guidelines \u2014 Anthropic (skills plugin)</h2><p>Codifies a brand \u2014 color tokens, typography scale, voice rules \u2014 into reusable guidelines that downstream skills can consume. Part of the 121,347-star official <code>skills</code> plugin.</p><p><strong>When to use:</strong> starting a brand system, documenting an existing one, or keeping generated assets on-brand.</p><p><a href=\"/skills/skills/brand-guidelines\">Learn more \u2192</a></p><h2>2. canvas-design \u2014 Anthropic (skills plugin)</h2><p>Composes layouts on a canvas \u2014 posters, social graphics, one-off creative pieces. Handles the grid, hierarchy, and export without you hand-placing every element.</p><p><strong>When to use:</strong> social assets, editorial cards, launch graphics.</p><p><a href=\"/skills/skills/canvas-design\">Learn more \u2192</a></p><h2>3. theme-factory \u2014 Anthropic (skills plugin)</h2><p>Generates cohesive design tokens \u2014 color scales, typography, spacing, radii \u2014 that stay consistent across an entire system. The kind of tool that saves you from the \"why are there eight shades of blue in this project\" audit.</p><p><strong>When to use:</strong> new brand systems, design-system refactors.</p><p><a href=\"/skills/skills/theme-factory\">Learn more \u2192</a></p><h2>4. nano-banana \u2014 cc-nano-banana</h2><p>Image generation helper tuned for editorial and social work. Good at cover images, social cards, and inline illustrations \u2014 less generic than default AI image output.</p><p><strong>When to use:</strong> fast hero images for articles, newsletters, social posts.</p><p><a href=\"/skills/cc-nano-banana/nano-banana\">Learn more \u2192</a></p><h2>5. slack-gif-creator \u2014 Anthropic (skills plugin)</h2><p>Generates branded Slack emoji and reaction GIFs. Tiny skill, surprising utility \u2014 internal culture artifacts compound fast.</p><p><strong>When to use:</strong> internal branding work, team onboarding packs.</p><p><a href=\"/skills/skills/slack-gif-creator\">Learn more \u2192</a></p><h2>6. seedance-comic-to-video \u2014 higgsfield-seedance2-jineng</h2><p>Turns static comic-style art into short video clips. Niche but powerful for designers moving into motion.</p><p><strong>When to use:</strong> social video, motion tests, expanding a static illustration into a promo.</p><p><a href=\"/skills/higgsfield-seedance2-jineng/seedance-comic-to-video\">Learn more \u2192</a></p><h2>7. frontend-design \u2014 frontend-design plugin</h2><p>If you also ship design as code \u2014 landing pages, component libraries \u2014 this is the skill that bridges concept to production. 17,453 stars.</p><p><strong>When to use:</strong> anywhere your designs need to become real HTML/CSS.</p><p><a href=\"/skills/frontend-design/frontend-design\">Learn more \u2192</a></p><h2>How to install</h2><p>If you install one skill, make it <code>brand-guidelines</code> \u2014 it's the substrate everything else consumes. Once you have guidelines codified, every subsequent canvas, image, or theme that comes out of Claude stays consistent with the brand instead of drifting. Every skill's detail page shows the one-line install command.</p>",
+  "author": {
+    "name": "Skill Index Editorial"
+  },
+  "publishedAt": "2026-04-20",
+  "updatedAt": "2026-04-20",
+  "image": {
+    "url": "/images/blog/best-claude-code-skills-for-graphic-designers.webp",
+    "alt": "Terminal archive card listing seven Claude Code skills for graphic designers",
+    "width": 1200,
+    "height": 1200
+  },
+  "category": "Guides",
+  "tags": [
+    "graphic-designers",
+    "listicle",
+    "design",
+    "skills"
+  ],
+  "readingTime": 5,
+  "featured": false
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "best-claude-code-skills-for-content-creators",
+  "title": "The 7 Best Claude Code Skills for Content Creators",
+  "description": "Writing, video prompting, humanizing AI output, and research \u2014 the seven Claude Code skills content creators actually reach for in 2026. All verified, all installable from the marketplace.",
+  "content": "<p>Content creation is a different discipline from software engineering, but the Claude Code plugin ecosystem has quietly built out a solid toolkit for it \u2014 drafting, editing, video prompt engineering, and research. Below are the seven most useful skills for writers, video producers, and newsletter operators, ranked by how often they earn their keep.</p><h2>1. humanizer \u2014 by humanizer plugin</h2><p>Removes the tells of AI-generated writing: em-dash overuse, rule-of-three constructions, inflated symbolism, promotional language. Based on Wikipedia's \"Signs of AI writing\" style guide. Verified, 14,689 stars.</p><p><strong>When to use:</strong> after a first AI draft, before publishing. Run it on anything you want to pass as human-written (which, for most content, is all of it).</p><p><code>/plugin install humanizer</code></p><p><a href=\"/skills/humanizer/humanizer\">Learn more \u2192</a></p><h2>2. prompt-master \u2014 by prompt-master plugin</h2><p>A meta-skill for iterating on prompts themselves \u2014 helpful when you're building a content production system and need reproducible prompts for consistent output across dozens of pieces. 5,446 stars, verified.</p><p><strong>When to use:</strong> when you're creating templates, not one-offs. Pays back tenfold on your second, third, fourth piece.</p><p><a href=\"/skills/prompt-master/prompt-master\">Learn more \u2192</a></p><h2>3. doc-coauthoring \u2014 by Anthropic (skills plugin)</h2><p>Collaborative long-form writing. Keeps voice consistent, suggests structural edits, handles the \"I need a third section but can't think of what it is\" moment. Part of the 121,347-star official skills plugin.</p><p><strong>When to use:</strong> anything over 1,000 words \u2014 guides, essays, long-form newsletters.</p><p><a href=\"/skills/skills/doc-coauthoring\">Learn more \u2192</a></p><h2>4. seedance \u2014 by seedance-prompt-skill</h2><p>Crafts prompts for Seedance video generation. The difference between a usable clip and slop is often just prompt structure; this skill knows the structure.</p><p><strong>When to use:</strong> short-form video for TikTok, Reels, or Shorts when you need a visual and don't want to film one.</p><p><a href=\"/skills/seedance-prompt-skill/seedance\">Learn more \u2192</a></p><h2>5. nano-banana \u2014 by cc-nano-banana</h2><p>Image generation helper tuned for editorial and social content \u2014 cover images, social cards, inline illustrations. Verified plugin.</p><p><strong>When to use:</strong> blog hero images, newsletter headers, social teasers.</p><p><a href=\"/skills/cc-nano-banana/nano-banana\">Learn more \u2192</a></p><h2>6. defuddle \u2014 by obsidian-skills</h2><p>Research companion for Obsidian users. Strips cruft from saved web articles, extracts the core argument, and cross-links notes. 25,631 stars.</p><p><strong>When to use:</strong> building a research library that you'll actually re-read, rather than a graveyard of saved tabs.</p><p><a href=\"/skills/obsidian-skills/defuddle\">Learn more \u2192</a></p><h2>7. test-driven-development \u2014 by Superpowers</h2><p>Odd choice for content creators? It's here because TDD, as a mindset, maps cleanly onto outline-first writing. The skill enforces \"define the test/outcome before writing the implementation/draft.\" From the 162,164-star superpowers plugin.</p><p><strong>When to use:</strong> when your drafts keep wandering and you need structural discipline.</p><p><a href=\"/skills/superpowers/test-driven-development\">Learn more \u2192</a></p><h2>How to install</h2><p>If you only install one skill from this list, make it <code>humanizer</code>. The gap between \"obviously AI\" and \"indistinguishable\" is the single biggest determinant of whether your content survives a reader's opening paragraph. Everything else in your pipeline is downstream of that.</p><p>Install it with one command, and see the skill's detail page for the exact install string.</p>",
+  "author": {
+    "name": "Skill Index Editorial"
+  },
+  "publishedAt": "2026-04-20",
+  "updatedAt": "2026-04-20",
+  "image": {
+    "url": "/images/blog/best-claude-code-skills-for-content-creators.webp",
+    "alt": "Terminal archive card listing seven Claude Code skills for content creators",
+    "width": 1200,
+    "height": 1200
+  },
+  "category": "Guides",
+  "tags": [
+    "content-creators",
+    "listicle",
+    "skills",
+    "claude-code"
+  ],
+  "readingTime": 5,
+  "featured": true
+}

@@ -1,8 +1,9 @@
 import type { MetadataRoute } from "next"
 import { siteConfig } from "../site.config"
 import { allSkills, allPlugins, generatedAt, PERSONAS, CATEGORIES } from "../lib/skills"
+import { getAllArticles } from "../lib/articles"
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const gen = new Date(generatedAt())
   const base = siteConfig.baseUrl
   const out: MetadataRoute.Sitemap = [
@@ -28,5 +29,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const c of CATEGORIES) out.push({ url: `${base}/categories/${c.slug}`, lastModified: gen, priority: 0.8 })
   out.push({ url: `${base}/for`, lastModified: gen, priority: 0.8 })
   out.push({ url: `${base}/categories`, lastModified: gen, priority: 0.8 })
+
+  // Blog
+  const articles = await getAllArticles()
+  if (articles.length) {
+    out.push({ url: `${base}/blog`, lastModified: gen, priority: 0.8 })
+    for (const a of articles) {
+      out.push({
+        url: `${base}/blog/${a.slug}`,
+        lastModified: new Date(a.updatedAt || a.publishedAt),
+        priority: 0.7,
+      })
+    }
+  }
   return out
 }

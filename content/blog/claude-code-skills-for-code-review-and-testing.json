@@ -1,0 +1,26 @@
+{
+  "slug": "claude-code-skills-for-code-review-and-testing",
+  "title": "5 Claude Code Skills for Code Review and Testing",
+  "description": "The five highest-signal Claude Code skills for writing tests, requesting reviews, and verifying work before it ships. Every one of them earns its place in a serious engineering workflow.",
+  "content": "<p>\"Claude wrote the code, and it looks right\" is a famous last sentence. The skills on this list close the gap between <em>looks right</em> and <em>is right</em> \u2014 tests that actually run, reviews that catch real issues, verification that happens before the PR not during production incident postmortems.</p><h2>1. test-driven-development \u2014 Superpowers</h2><p>Enforces the spec-then-code order. The skill instructs Claude to write failing tests first, confirm they fail for the expected reason, then implement, then confirm they pass. Simple in theory, regularly skipped in practice \u2014 especially by AI assistants that love to jump straight to implementation. 162,164 stars, verified.</p><p><strong>When to use:</strong> any bugfix, any new feature with defined behavior, any refactor where you need to preserve existing behavior.</p><p><a href=\"/skills/superpowers/test-driven-development\">Learn more \u2192</a></p><h2>2. verification-before-completion \u2014 Superpowers</h2><p>The single most under-applied skill in the Claude Code ecosystem. Before Claude claims a task is done, this skill requires running verification commands and pasting the output. No more \"\u2713 Fixed!\" with a broken build. Verified.</p><p><strong>When to use:</strong> always. If you only install one skill from this list, pick this one.</p><p><a href=\"/skills/superpowers/verification-before-completion\">Learn more \u2192</a></p><h2>3. requesting-code-review \u2014 Superpowers</h2><p>Turns Claude into a reviewer for its own or other code. Works against a set of acceptance criteria and produces a review that reads like a senior engineer's, not a compliments bot.</p><p><strong>When to use:</strong> before opening a PR. Catches issues that would otherwise bounce between you and the CI pipeline.</p><p><a href=\"/skills/superpowers/requesting-code-review\">Learn more \u2192</a></p><h2>4. webapp-testing \u2014 skills (Anthropic)</h2><p>End-to-end browser testing without hand-writing Playwright setup. Part of the official 121,347-star <code>skills</code> plugin. Drives a real browser, asserts on DOM state, captures screenshots on failure.</p><p><strong>When to use:</strong> any change to interactive UI. The difference between \"unit tests pass\" and \"user flow works\" is where most shipped bugs live.</p><p><a href=\"/skills/skills/webapp-testing\">Learn more \u2192</a></p><h2>5. test-cases \u2014 myclaude</h2><p>A test-case generator. Given a function or spec, produces a balanced set of cases: happy path, edge, error, boundary. Part of the 2,606-star <code>myclaude</code> plugin. Less philosophical than Superpowers' TDD skill \u2014 just a useful tool for populating a test file fast.</p><p><strong>When to use:</strong> when you need coverage for code that was written without tests, or when your own test imagination runs out at \"it returns the right value.\"</p><p><a href=\"/skills/myclaude/test-cases\">Learn more \u2192</a></p><h2>How they fit together</h2><p>The natural workflow: <strong>test-driven-development</strong> for new code, <strong>test-cases</strong> to fill in the gaps when you inherit untested code, <strong>webapp-testing</strong> for the UI layer, <strong>verification-before-completion</strong> to keep Claude honest, and <strong>requesting-code-review</strong> as the final gate before you push.</p><p>Install them as a set. They stack. The resulting workflow is slower than \"just ship it,\" but it's measurably faster than \"ship it, fix it, ship it again, apologize to the team.\"</p>",
+  "author": {
+    "name": "Skill Index Editorial"
+  },
+  "publishedAt": "2026-04-20",
+  "updatedAt": "2026-04-20",
+  "image": {
+    "url": "/images/blog/claude-code-skills-for-code-review-and-testing.webp",
+    "alt": "Terminal archive card of five Claude Code skills for code review and testing",
+    "width": 1200,
+    "height": 1200
+  },
+  "category": "Guides",
+  "tags": [
+    "testing",
+    "code-review",
+    "skills",
+    "claude-code"
+  ],
+  "readingTime": 4,
+  "featured": false
+}

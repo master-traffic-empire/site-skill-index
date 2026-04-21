@@ -1,0 +1,26 @@
+{
+  "slug": "superpowers-vs-myclaude-comparison",
+  "title": "Superpowers vs myclaude: Which Claude Code Plugin Is Right for You?",
+  "description": "Two of the most widely used Claude Code skill bundles \u2014 Superpowers and myclaude \u2014 overlap in scope but differ in philosophy. A fair breakdown of who each one is actually for.",
+  "content": "<p>If you've spent any time in the Claude Code plugin marketplace, you've seen both <code>superpowers</code> and <code>myclaude</code> sitting near the top of the list. Both are verified. Both bundle more than ten skills. Both aim to upgrade Claude Code from \"smart autocomplete\" to \"disciplined collaborator.\" But they take different routes, and the right choice depends on what you actually want out of the tool.</p><h2>The headline numbers</h2><ul><li><strong>Superpowers</strong> \u2014 14 skills, 162,164 stars. The heavyweight.</li><li><strong>myclaude</strong> \u2014 14 skills, 2,606 stars. A smaller, more opinionated package.</li></ul><p>Stars are a rough popularity signal, not a quality one. Both plugins ship real, well-maintained code.</p><h2>Philosophy</h2><p><strong>Superpowers</strong> is built around process. The skill names give it away: <em>systematic-debugging</em>, <em>test-driven-development</em>, <em>verification-before-completion</em>, <em>writing-plans</em>, <em>executing-plans</em>, <em>requesting-code-review</em>. It tries to impose engineering discipline on every session \u2014 hypothesis-first debugging, spec-before-code, evidence-before-claims. It's heavy in the best way. If you've ever watched Claude confidently claim \"fixed!\" without running the tests, superpowers is what fixes that.</p><p><strong>myclaude</strong> is built around composable building blocks \u2014 the skills lean more toward utilities (<em>omo</em>, <em>test-cases</em>) than meta-methodology. It's lighter-touch. It assumes you already know how you want to work and just want good tools for the individual steps.</p><h2>Where they overlap</h2><p>Both have test-oriented skills. Both encourage structured thinking. Both include some form of plan-before-execute flow. You don't need both unless you're curating.</p><h2>Where they diverge</h2><p><strong>Superpowers has parallel-agent dispatching</strong> (<code>dispatching-parallel-agents</code>) and worktree orchestration (<code>using-git-worktrees</code>) that myclaude doesn't match. If you work in a setup where Claude is spawning subagents against isolated worktrees, superpowers is a clear win.</p><p><strong>myclaude is lighter to adopt.</strong> Superpowers can feel heavy the first week \u2014 there's a lot of \"I should be using a subagent for this\" internal friction. myclaude doesn't impose that load. If you want a few good skills without a philosophy, it's the better choice.</p><h2>Which should you install?</h2><p><strong>Install superpowers if:</strong> you're building non-trivial software, working in a codebase where bugs are expensive, or you already feel like Claude moves too fast and skips steps. The process skills are the value.</p><p><strong>Install myclaude if:</strong> you want utility over discipline, or you're still figuring out your workflow and don't want a prescriptive framework.</p><p><strong>Install both:</strong> plugins compose, skills don't clash. Many users run both and pull the subset they actually use from each.</p><h2>A note on maturity</h2><p>Superpowers sees more frequent updates \u2014 last commit within the past few days at time of writing, versus about ten days for myclaude. Both are actively maintained, but superpowers moves faster. For production setups where you want stability, that can cut either way.</p><h2>Bottom line</h2><p>If you can only install one, pick <strong>superpowers</strong>. The meta-skills (<em>systematic-debugging</em>, <em>verification-before-completion</em>) are genuinely the best-in-class examples of what the Claude Code plugin system can do. <a href=\"/plugins/superpowers\">See the plugin page</a> for the exact install command and the full skill list.</p>",
+  "author": {
+    "name": "Skill Index Editorial"
+  },
+  "publishedAt": "2026-04-20",
+  "updatedAt": "2026-04-20",
+  "image": {
+    "url": "/images/blog/superpowers-vs-myclaude-comparison.webp",
+    "alt": "Split terminal archive card comparing Superpowers and myclaude Claude Code plugins",
+    "width": 1200,
+    "height": 1200
+  },
+  "category": "Comparisons",
+  "tags": [
+    "comparison",
+    "superpowers",
+    "myclaude",
+    "plugins"
+  ],
+  "readingTime": 5,
+  "featured": true
+}

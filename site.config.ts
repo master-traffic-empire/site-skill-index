@@ -50,8 +50,10 @@ export const siteConfig: SiteConfig = {
   },
 
   blog: {
-    enabled: false,
+    enabled: true,
     basePath: "/blog",
+    feedTitle: "Skill Index Blog",
+    feedDescription: "Curated lists, comparisons, and picks from the Claude Code skills ecosystem.",
   },
 
   monetization: {

@@ -1,0 +1,26 @@
+{
+  "slug": "frontend-design-plus-webapp-testing-workflow",
+  "title": "How to Combine frontend-design + webapp-testing for Production-Ready UIs",
+  "description": "Two official Anthropic skills \u2014 frontend-design and webapp-testing \u2014 compose into a tight design-and-verify loop. Here's the exact workflow for shipping UI that both looks good and actually works.",
+  "content": "<p>The two most useful skills Anthropic ships for frontend work are <code>frontend-design</code> (from the plugin of the same name, 17,453 stars) and <code>webapp-testing</code> (from the 121,347-star <code>skills</code> plugin). They compose into a loop that's tighter than anything you can do with either one alone: generate a good-looking component, then drive a real browser against it to verify behavior. Design-and-verify in one session.</p><h2>The problem each skill solves on its own</h2><p><strong>frontend-design</strong> fixes the aesthetic problem \u2014 the default AI-generated UI is functional but forgettable. This skill pushes the output toward distinctive, intentional design. It matters because \"looks like every other AI-generated landing page\" is a real reason shipped products feel cheap.</p><p><strong>webapp-testing</strong> fixes the verification problem \u2014 you can look at a component and miss that its button is dead, its form submits to nowhere, or its modal traps focus in the wrong place. Browser automation catches that. Humans do not.</p><h2>Why they're better together</h2><p>The gap is this: <code>frontend-design</code> produces beautiful code that might or might not work. <code>webapp-testing</code> produces good tests for code that might or might not be beautiful. Chain them, and you get both. The testing skill's output becomes feedback for the next iteration of the design skill. Two to three cycles and you have a component that looks good and works.</p><h2>The workflow</h2><ol><li><strong>Describe the component.</strong> Not just \"a pricing card\" \u2014 write out the interactions, the states, the edge cases. The more concrete the brief, the less drift between design and test.</li><li><strong>Invoke frontend-design.</strong> Generate a first pass. Let it produce the full component including dark mode, hover states, and loading states. Don't settle for a bare shell.</li><li><strong>Invoke webapp-testing.</strong> Drive the browser. Test that every interactive element responds, that forms submit, that keyboard navigation works, that focus is trapped where it should be.</li><li><strong>Read the test failures as design feedback.</strong> If the test can't find the submit button, that's not just a test bug \u2014 it's a design bug. Fix the design.</li><li><strong>Repeat until green.</strong> Two or three cycles typically.</li></ol><h2>A concrete example</h2><p>Pricing card with three tiers, a featured tier, monthly/annual toggle, CTA per tier. <code>frontend-design</code> produces a version with strong visual hierarchy \u2014 the featured tier is larger, the toggle is centered above. Run <code>webapp-testing</code>: the test catches that the toggle doesn't actually change the displayed prices (a common first-pass miss). Fix the state handler. Re-run: the featured CTA is focused on page load for keyboard users \u2014 not desired. Fix the autofocus. Re-run: green.</p><p>Total time: maybe 20 minutes. Output: a component that's both polished and works. Without the pairing, you either ship a polished broken component or a working ugly one.</p><h2>Install commands</h2><p>Both plugins are installable from the marketplace. Each skill's detail page has the exact install string \u2014 <a href=\"/skills/frontend-design/frontend-design\">frontend-design</a> and <a href=\"/skills/skills/webapp-testing\">webapp-testing</a>. Install both; the combined workflow is one of the highest-leverage things in the Claude Code ecosystem right now.</p><h2>Extensions</h2><p>Want to stretch further? Add <code>requesting-code-review</code> from superpowers as the third skill in the loop. Design \u2192 test \u2192 review. Three skills, one session, shipped UI.</p>",
+  "author": {
+    "name": "Skill Index Editorial"
+  },
+  "publishedAt": "2026-04-20",
+  "updatedAt": "2026-04-20",
+  "image": {
+    "url": "/images/blog/frontend-design-plus-webapp-testing-workflow.webp",
+    "alt": "Terminal archive card showing a design-plus-test workflow using two Claude Code skills",
+    "width": 1200,
+    "height": 1200
+  },
+  "category": "Integrations",
+  "tags": [
+    "integration",
+    "workflow",
+    "frontend",
+    "testing"
+  ],
+  "readingTime": 5,
+  "featured": false
+}

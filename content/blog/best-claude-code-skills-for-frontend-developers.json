@@ -1,0 +1,26 @@
+{
+  "slug": "best-claude-code-skills-for-frontend-developers",
+  "title": "The 7 Best Claude Code Skills for Frontend Developers",
+  "description": "A curated list of the highest-signal Claude Code skills for frontend work in 2026 \u2014 component scaffolding, visual regression, design consultation, and more. All verified, installable with one command.",
+  "content": "<p>Frontend work is where Claude Code skills pay off fastest \u2014 the feedback loop between \"I need a component\" and \"it's on the page\" is short, visible, and easy to verify. The skills listed below are verified (they live in tracked plugin repos with real stars and recent commits), and every one of them does something a frontend developer actually needs. Ranked roughly by how often you'll reach for them.</p><h2>1. frontend-design \u2014 by Anthropic</h2><p>The reference skill for producing distinctive, production-grade UI code. Lives in the official <code>frontend-design</code> plugin (17,453 stars). When you ask Claude to build a component or page, this skill nudges the output away from generic AI aesthetics toward something polished and intentional.</p><p><strong>When to use:</strong> greenfield components, landing pages, design-system starters.</p><p><code>/plugin install frontend-design@anthropics</code></p><p><a href=\"/skills/frontend-design/frontend-design\">Learn more \u2192</a></p><h2>2. webapp-testing \u2014 by Anthropic (skills plugin)</h2><p>Automates end-to-end browser testing. Part of the flagship <code>skills</code> plugin from Anthropic (121,347 stars). Drives a real browser to click through flows, capture screenshots, and assert behavior without you writing Playwright glue code by hand.</p><p><strong>When to use:</strong> before shipping any interactive flow, after a component refactor, or to reproduce a reported bug.</p><p><a href=\"/skills/skills/webapp-testing\">Learn more \u2192</a></p><h2>3. theme-factory \u2014 by Anthropic (skills plugin)</h2><p>Generates cohesive theme tokens \u2014 colors, fonts, spacing, radii \u2014 and wires them into your component system. Saves the hour you'd otherwise spend arguing with yourself about gray-500 vs gray-600.</p><p><strong>When to use:</strong> starting a new project, rebranding an existing one, or standardizing a codebase that grew without a design system.</p><p><a href=\"/skills/skills/theme-factory\">Learn more \u2192</a></p><h2>4. web-artifacts-builder \u2014 by Anthropic (skills plugin)</h2><p>Ships self-contained HTML artifacts \u2014 interactive demos, one-page sites, component showcases \u2014 without project scaffolding. The fastest way to turn an idea into a shareable link.</p><p><strong>When to use:</strong> client demos, quick prototypes, interactive documentation.</p><p><a href=\"/skills/skills/web-artifacts-builder\">Learn more \u2192</a></p><h2>5. design-consultation \u2014 by gstack</h2><p>Acts as a design reviewer for components and flows. Points out spacing, hierarchy, and affordance issues before QA does. From the <code>gstack</code> plugin (78,986 stars).</p><p><strong>When to use:</strong> pre-PR review, or when a component \"works but feels off.\"</p><p><a href=\"/skills/gstack/design-consultation\">Learn more \u2192</a></p><h2>6. playground \u2014 by Anthropic</h2><p>An isolated sandbox for trying component ideas without polluting your project. Great for A/B testing layouts before you commit to one.</p><p><strong>When to use:</strong> exploring animation variants, comparing chart libraries, or stress-testing a component against weird data.</p><p><a href=\"/skills/playground/playground\">Learn more \u2192</a></p><h2>7. systematic-debugging \u2014 by Superpowers</h2><p>Not frontend-specific, but the highest-leverage debugging skill in the ecosystem. From the flagship <code>superpowers</code> plugin (162,164 stars). Forces a disciplined hypothesis-and-test loop instead of the random log-statement shotgun.</p><p><strong>When to use:</strong> any bug that's lasted more than 15 minutes.</p><p><a href=\"/skills/superpowers/systematic-debugging\">Learn more \u2192</a></p><h2>How to install</h2><p>Each skill lives inside a plugin. Add the plugin marketplace once, then install with a single command. From the skill detail page you get the exact install string \u2014 no copy-paste guessing.</p><p>If you're new to the Claude Code plugin system, start with <code>frontend-design</code>. It's the one that produces the most visible \"wow, that's better than the default\" moment, and it unlocks a different baseline for every subsequent component you ask Claude to build.</p>",
+  "author": {
+    "name": "Skill Index Editorial"
+  },
+  "publishedAt": "2026-04-20",
+  "updatedAt": "2026-04-20",
+  "image": {
+    "url": "/images/blog/best-claude-code-skills-for-frontend-developers.webp",
+    "alt": "Terminal archive window showing seven Claude Code skills for frontend developers",
+    "width": 1200,
+    "height": 1200
+  },
+  "category": "Guides",
+  "tags": [
+    "frontend",
+    "listicle",
+    "skills",
+    "claude-code"
+  ],
+  "readingTime": 5,
+  "featured": true
+}
