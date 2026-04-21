@@ -4,7 +4,6 @@ import Link from "next/link"
 import { siteConfig } from "../../../site.config"
 import { PERSONAS, skillsForPersona } from "../../../lib/skills"
 import { SkillCard } from "../../../components/SkillCard"
-import { PersonaGlyph } from "../../../components/PersonaGlyph"
 
 interface Props { params: Promise<{ persona: string }> }
 
@@ -45,7 +44,13 @@ export default async function PersonaPage({ params }: Props) {
             <span className="amber">{skills.length}</span> skills // curated for {p.slug}
           </p>
         </div>
-        <PersonaGlyph persona={p.slug} size={120} className="persona-glyph-lg" strokeWidth={1} />
+        <img
+          src={`/images/personas/${p.slug}.webp`}
+          alt={`Illustration for ${p.label}`}
+          className="persona-hero-img"
+          width={160}
+          height={160}
+        />
       </div>
       <div className="skill-grid">
         {skills.map(s => <SkillCard key={s.slug} skill={s} />)}

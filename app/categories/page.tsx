@@ -16,14 +16,24 @@ export default function CategoriesIndex() {
       <p className="idx-sub">
         <span className="amber">{CATEGORIES.length}</span> categories // browse by topic
       </p>
-      <ul className="idx-grid">
+      <ul className="cat-idx-grid">
         {CATEGORIES.map(c => {
           const count = skillsForCategory(c.slug).length
           return (
             <li key={c.slug}>
-              <Link href={`/categories/${c.slug}`} className="idx-card">
-                <span className="idx-card-name">{c.label}</span>
-                <span className="idx-card-count">{count} skills</span>
+              <Link href={`/categories/${c.slug}`} className="cat-idx-card">
+                <img
+                  src={`/images/categories/${c.slug}.webp`}
+                  alt={`Illustration for ${c.label}`}
+                  className="cat-idx-banner"
+                  width={800}
+                  height={450}
+                  loading="lazy"
+                />
+                <span className="cat-idx-meta">
+                  <span className="idx-card-name">{c.label}</span>
+                  <span className="idx-card-count">{count} skills</span>
+                </span>
               </Link>
             </li>
           )

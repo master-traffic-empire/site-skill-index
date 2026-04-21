@@ -2,7 +2,6 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { siteConfig } from "../../site.config"
 import { PERSONAS, skillsForPersona } from "../../lib/skills"
-import { PersonaGlyph } from "../../components/PersonaGlyph"
 
 export const metadata: Metadata = {
   title: `Claude Code skills by audience | ${siteConfig.name}`,
@@ -23,7 +22,14 @@ export default function PersonasIndex() {
           return (
             <li key={p.slug}>
               <Link href={`/for/${p.slug}`} className="persona-card">
-                <PersonaGlyph persona={p.slug} size={44} className="persona-glyph" />
+                <img
+                  src={`/images/personas/${p.slug}.webp`}
+                  alt={`Illustration for ${p.label}`}
+                  className="persona-thumb"
+                  width={44}
+                  height={44}
+                  loading="lazy"
+                />
                 <span className="persona-text">
                   <span className="persona-name">{p.label}</span>
                   <span className="persona-count">{count} skills</span>

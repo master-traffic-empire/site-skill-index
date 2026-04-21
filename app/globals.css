@@ -264,7 +264,88 @@ main {
   z-index: 0;
 }
 .hero-bg svg { width: 100%; height: 100%; display: block; }
+.hero-img-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  filter: saturate(0.9);
+  pointer-events: none;
+  z-index: 0;
+  mask-image: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 70%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 70%);
+}
 .hero-inner { position: relative; z-index: 1; }
+.persona-thumb {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid var(--c-line-strong);
+}
+.persona-hero-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid var(--c-line-strong);
+}
+.cat-idx-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cat-idx-grid li { margin: 0; }
+.cat-idx-card {
+  display: block;
+  background: var(--c-bg-elev);
+  border: 1px solid var(--c-line);
+  color: var(--c-text);
+  text-decoration: none;
+  transition: border-color 140ms;
+  overflow: hidden;
+}
+.cat-idx-card:hover { border-color: var(--c-amber); }
+.cat-idx-banner {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 800 / 450;
+  object-fit: cover;
+  border-bottom: 1px solid var(--c-line);
+}
+.cat-idx-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+}
+.cat-hero {
+  position: relative;
+  margin: 0 0 2rem;
+  border: 1px solid var(--c-line);
+  overflow: hidden;
+  background: var(--c-bg-elev);
+}
+.cat-hero-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 800 / 450;
+  max-height: 260px;
+  object-fit: cover;
+  opacity: 0.85;
+}
+.cat-hero-text {
+  padding: 1.2rem 1.3rem;
+  border-top: 1px solid var(--c-line);
+}
 .hero-title {
   font-family: var(--font-display);
   font-style: italic;
@@ -869,6 +950,7 @@ main {
   .featured .card { transform: none !important; }
   .persona-hero { grid-template-columns: 1fr; }
   .persona-hero .persona-glyph-lg { display: none; }
+  .persona-hero .persona-hero-img { display: none; }
   .recent-list li { flex-wrap: wrap; }
 }
 @media (min-width: 761px) and (max-width: 1020px) {

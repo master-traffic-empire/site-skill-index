@@ -37,10 +37,21 @@ export default async function CategoryPage({ params }: Props) {
         <span className="sep">/</span>
         {c.label.toLowerCase()}
       </nav>
-      <h1 className="idx-h1">{c.label}</h1>
-      <p className="idx-sub">
-        <span className="amber">{skills.length}</span> skills // {c.label.toLowerCase()} category
-      </p>
+      <div className="cat-hero">
+        <img
+          src={`/images/categories/${slug}.webp`}
+          alt={`Illustration for ${c.label}`}
+          className="cat-hero-img"
+          width={800}
+          height={450}
+        />
+        <div className="cat-hero-text">
+          <h1 className="idx-h1">{c.label}</h1>
+          <p className="idx-sub">
+            <span className="amber">{skills.length}</span> skills // {c.label.toLowerCase()} category
+          </p>
+        </div>
+      </div>
       <div className="skill-grid">
         {skills.map(s => <SkillCard key={s.slug} skill={s} />)}
       </div>

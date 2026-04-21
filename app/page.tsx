@@ -11,7 +11,6 @@ import {
 } from "../lib/skills"
 import { SkillCard } from "../components/SkillCard"
 import { SkillSearch } from "../components/SkillSearch"
-import { PersonaGlyph } from "../components/PersonaGlyph"
 import { HeroGrid } from "../components/HeroGrid"
 
 export const metadata: Metadata = {
@@ -69,6 +68,11 @@ export default function Home() {
     <main className="home">
       {/* HERO */}
       <section className="home-hero">
+        <div
+          className="hero-img-bg"
+          aria-hidden="true"
+          style={{ backgroundImage: "url(/images/hero.webp)" }}
+        />
         <div className="hero-bg">
           <HeroGrid slugs={bgSlugs} />
         </div>
@@ -109,7 +113,14 @@ export default function Home() {
             return (
               <li key={p.slug}>
                 <Link href={`/for/${p.slug}`} className="persona-card">
-                  <PersonaGlyph persona={p.slug} size={44} className="persona-glyph" />
+                  <img
+                    src={`/images/personas/${p.slug}.webp`}
+                    alt={`Illustration for ${p.label}`}
+                    className="persona-thumb"
+                    width={44}
+                    height={44}
+                    loading="lazy"
+                  />
                   <span className="persona-text">
                     <span className="persona-name">{p.label}</span>
                     <span className="persona-count">{n} skills</span>
