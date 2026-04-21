@@ -1,0 +1,23 @@
+{
+  "slug": "example-article",
+  "title": "Example Article — Replace With Real Content",
+  "description": "This is a placeholder article showing the expected JSON format for blog content. Delete this file and add real articles.",
+  "content": "<p>Article HTML content goes here. The content agent writes this.</p><h2>Subheading</h2><p>More content with <a href=\"#\">links</a>, lists, and images.</p>",
+  "author": {
+    "name": "Editorial Team",
+    "url": null,
+    "image": null
+  },
+  "publishedAt": "2026-04-06T00:00:00Z",
+  "updatedAt": "2026-04-06T00:00:00Z",
+  "image": {
+    "url": "/images/blog/example-article.webp",
+    "alt": "Description of the hero image",
+    "width": 1200,
+    "height": 675
+  },
+  "category": "Guides",
+  "tags": ["example", "getting-started"],
+  "readingTime": 3,
+  "featured": false
+}
