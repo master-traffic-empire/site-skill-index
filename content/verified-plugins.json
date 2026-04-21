@@ -4,5 +4,19 @@
   {"repo": "davila7/claude-code-templates", "reason": "community template library"},
   {"repo": "hesreallyhim/awesome-claude-code", "reason": "curation source (not ingested for skills)"},
   {"repo": "cexll/myclaude", "reason": "community plugin with skills"},
-  {"repo": "obra/superpowers", "reason": "standalone superpowers plugin with skills"}
+  {"repo": "obra/superpowers", "reason": "standalone superpowers plugin with skills"},
+  {"repo": "kkoppenhaver/cc-nano-banana", "reason": "missing-big-name: nano-banana (Gemini image generation, 272 stars)"},
+  {"repo": "feedtailor/ccskill-nanobanana", "reason": "missing-big-name: nano-banana-pro"},
+  {"repo": "inbharatai/claude-skills", "reason": "missing-big-name: midjourney-prompter + large skill collection"},
+  {"repo": "nidhinjs/prompt-master", "reason": "missing-big-name: prompt-master (Midjourney/AI prompt crafter, 5.4k stars)"},
+  {"repo": "blader/humanizer", "reason": "missing-big-name: humanizer (14.7k stars)"},
+  {"repo": "Aboudjem/humanizer-skill", "reason": "missing-big-name: humanizer (37 AI-pattern detector)"},
+  {"repo": "humanizerai/agent-skills", "reason": "missing-big-name: humanizer (multi-skill: humanize, detect-ai, readability)"},
+  {"repo": "dexhunter/seedance2-skill", "reason": "missing-big-name: seedance (ByteDance video, 282 stars)"},
+  {"repo": "songguoxs/seedance-prompt-skill", "reason": "missing-big-name: seedance prompt skill (1.6k stars)"},
+  {"repo": "beshuaxian/higgsfield-seedance2-jineng", "reason": "missing-big-name: seedance2 (Higgsfield)"},
+  {"repo": "garrytan/gstack", "reason": "missing-big-name: gstack (Garry Tan stack, 79k stars)"},
+  {"repo": "kepano/obsidian-skills", "reason": "missing-big-name: obsidian (kepano, 25.6k stars)"},
+  {"repo": "pablo-mano/Obsidian-CLI-skill", "reason": "missing-big-name: obsidian-cli (150 stars)"},
+  {"repo": "firecrawl/cli", "reason": "missing-big-name: firecrawl official CLI + agent skill (321 stars)"}
 ]
