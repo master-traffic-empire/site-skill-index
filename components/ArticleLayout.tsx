@@ -10,6 +10,7 @@ import type { Article, SiteConfig } from "../base-site/types"
 import {
   generateArticleJsonLd,
   generateBreadcrumbJsonLd,
+  generateFAQJsonLd,
 } from "../base-site/lib/jsonld"
 import { ArticleSkillCard } from "./ArticleSkillCard"
 
@@ -145,6 +146,10 @@ export function ArticleLayout({ article, siteConfig, contentHtml, related = [] }
   const articleJsonLd = generateArticleJsonLd(article, siteConfig) as Record<string, unknown>
   articleJsonLd.image = [`${siteConfig.baseUrl}/og-image.png`]
 
+  const faqJsonLd = article.faq && article.faq.length > 0
+    ? generateFAQJsonLd(article.faq)
+    : null
+
   const breadcrumbJsonLd = generateBreadcrumbJsonLd([
     { name: "Home", url: siteConfig.baseUrl },
     { name: "Blog", url: `${siteConfig.baseUrl}${blogPath}` },
@@ -163,6 +168,12 @@ export function ArticleLayout({ article, siteConfig, contentHtml, related = [] }
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       <article className="article art-editorial">
         <nav className="breadcrumb" aria-label="Breadcrumb">
@@ -194,6 +205,18 @@ export function ArticleLayout({ article, siteConfig, contentHtml, related = [] }
         <div className="article-body art-body">
           <RenderBlocks blocks={blocks} />
         </div>
+
+        {article.faq && article.faq.length > 0 && (
+          <section className="art-faq" aria-labelledby="art-faq-heading">
+            <h2 id="art-faq-heading">Frequently Asked Questions</h2>
+            {article.faq.map((item, i) => (
+              <details key={i} className="art-faq-item">
+                <summary className="art-faq-q">{item.question}</summary>
+                <p className="art-faq-a">{item.answer}</p>
+              </details>
+            ))}
+          </section>
+        )}
 
         {related.length > 0 && (
           <section className="art-related">

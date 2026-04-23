@@ -1345,6 +1345,58 @@ main {
 }
 .art-related a:hover { color: var(--c-amber); }
 
+/* --- Article FAQ (AEO/GEO) --- */
+.art-faq {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--c-line);
+}
+.art-faq h2 {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--c-text-muted);
+  margin: 0 0 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+}
+.art-faq h2::before { content: "// "; color: var(--c-amber); }
+.art-faq-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed var(--c-line-strong);
+}
+.art-faq-item[open] .art-faq-q::after { content: "−"; }
+.art-faq-q {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--c-text);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-variation-settings: "SOFT" 50, "WONK" 0;
+}
+.art-faq-q::-webkit-details-marker { display: none; }
+.art-faq-q::after {
+  content: "+";
+  color: var(--c-amber);
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  line-height: 1;
+}
+.art-faq-q:hover { color: var(--c-amber); }
+.art-faq-a {
+  margin: 0.75rem 0 0.25rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--c-amber);
+  color: var(--c-text);
+  line-height: 1.65;
+  font-size: 0.98rem;
+}
+
 /* Article footer tags */
 .art-editorial .article-footer {
   margin-top: 2.5rem;
