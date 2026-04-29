@@ -197,9 +197,11 @@ export function ArticleLayout({ article, siteConfig, contentHtml, related = [] }
 
         <header className="art-head">
           <h1 className="art-title">{article.title}</h1>
-          <time className="art-timestamp" dateTime={article.publishedAt}>
-            {formatPublished(article.publishedAt)}
-          </time>
+          <div className="blog-byline art-byline" style={{ margin: "0.5rem 0", fontSize: "0.95rem", color: "var(--text-muted, #94a3b8)" }}>
+            By <span style={{ color: "var(--text, #e2e8f0)", fontWeight: 600 }}>{article.author?.name || "Skill Index Editorial"}</span>
+            <span> · </span>
+            <time dateTime={article.publishedAt}>{formatPublished(article.publishedAt)}</time>
+          </div>
         </header>
 
         <div className="article-body art-body">
