@@ -7,8 +7,8 @@
 // the weekly persona listicle. Update this list as new personas
 // get first-pass coverage. Head of the list = next up.
 //
-//   Done so far: frontend-developers, content-creators, graphic-designers, backend-engineers, ml-engineers, devops-engineers, data-analysts, marketers, qa-engineers, mobile-developers, technical-writers, solo-founders, product-managers
-//   Next up: students, architects
+//   Done so far: frontend-developers, content-creators, graphic-designers, backend-engineers, ml-engineers, devops-engineers, data-analysts, marketers, qa-engineers, mobile-developers, technical-writers, solo-founders, product-managers, students
+//   Next up: architects
 // ─────────────────────────────────────────────────────────────────
 
 import { readdir, readFile } from "fs/promises"
