@@ -8,7 +8,7 @@
 // get first-pass coverage. Head of the list = next up.
 //
 //   Done so far: frontend-developers, content-creators, graphic-designers, backend-engineers, ml-engineers, devops-engineers, data-analysts, marketers, qa-engineers, mobile-developers, technical-writers, solo-founders, product-managers, students
-//   Next up: architects
+//   Next up: architects, junior-developers, freelancers, indie-hackers, security-engineers, sre-engineers, prompt-engineers, ai-engineers, research-engineers, growth-engineers, sales-engineers, customer-engineers
 // ─────────────────────────────────────────────────────────────────
 
 import { readdir, readFile } from "fs/promises"
