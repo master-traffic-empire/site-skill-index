@@ -7,8 +7,8 @@
 // the weekly persona listicle. Update this list as new personas
 // get first-pass coverage. Head of the list = next up.
 //
-//   Done so far: frontend-developers, content-creators, graphic-designers, backend-engineers, ml-engineers, devops-engineers, data-analysts, marketers, qa-engineers, mobile-developers, technical-writers, solo-founders, product-managers, students, architects, junior-developers, freelancers, indie-hackers, security-engineers, sre-engineers, prompt-engineers, ai-engineers, research-engineers, growth-engineers, sales-engineers
-//   Next up: customer-engineers
+//   Done so far: frontend-developers, content-creators, graphic-designers, backend-engineers, ml-engineers, devops-engineers, data-analysts, marketers, qa-engineers, mobile-developers, technical-writers, solo-founders, product-managers, students, architects, junior-developers, freelancers, indie-hackers, security-engineers, sre-engineers, prompt-engineers, ai-engineers, research-engineers, growth-engineers, sales-engineers, customer-engineers
+//   Next up: (EMPTY — rotation exhausted; CEO must add new personas next cycle, e.g. platform-engineers, support-engineers, developer-advocates, automation-engineers, integration-engineers)
 // ─────────────────────────────────────────────────────────────────
 
 import { readdir, readFile } from "fs/promises"
