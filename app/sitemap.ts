@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next"
 import { siteConfig } from "../site.config"
 import { allSkills, allPlugins, generatedAt, PERSONAS, CATEGORIES, BUSINESS_CATEGORIES } from "../lib/skills"
 import { getAllArticles } from "../lib/articles"
+import { skillPath, xmlEscape } from "../lib/skill-url"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const gen = new Date(generatedAt())
@@ -13,7 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]
   for (const s of allSkills()) {
     out.push({
-      url: `${base}/skills/${s.plugin_slug}/${s.name}`,
+      url: `${base}${skillPath(s)}`,
       lastModified: gen,
       priority: s.verified ? 1.0 : 0.6,
     })
@@ -44,5 +45,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       })
     }
   }
-  return out
+  // Next.js does not XML-escape <loc>; one raw "&" invalidates the whole file (#94).
+  return out.map(e => ({ ...e, url: xmlEscape(e.url) }))
 }

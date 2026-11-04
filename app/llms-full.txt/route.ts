@@ -1,13 +1,14 @@
 import { siteConfig } from "../../site.config"
 import { allSkills } from "../../lib/skills"
 import { getAllArticles } from "../../lib/articles"
+import { skillPath } from "../../lib/skill-url"
 
 export async function GET() {
   const all = allSkills()
   const articles = await getAllArticles()
   const skillBody = all.map(s => `## ${s.plugin_slug}/${s.name} ${s.verified ? "[verified]" : ""}
 
-URL: ${siteConfig.baseUrl}/skills/${s.plugin_slug}/${s.name}
+URL: ${siteConfig.baseUrl}${skillPath(s)}
 Install: \`/plugin install ${s.plugin_slug}\`
 Type: ${s.type}
 Description: ${s.description ?? ""}

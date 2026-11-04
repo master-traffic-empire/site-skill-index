@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation"
+import { notFound, permanentRedirect } from "next/navigation"
 import Link from "next/link"
 import type { Metadata } from "next"
 import { siteConfig } from "../../../../site.config"
@@ -6,11 +6,12 @@ import { allSkills, getSkill, type Skill } from "../../../../lib/skills"
 import { InstallCommand } from "../../../../components/InstallCommand"
 import { TrustSignals } from "../../../../components/TrustSignals"
 import { Markdown } from "../../../../components/Markdown"
+import { skillPath, skillUrlName } from "../../../../lib/skill-url"
 
 interface Props { params: Promise<{ plugin: string; name: string }> }
 
 export async function generateStaticParams() {
-  return allSkills().map(s => ({ plugin: s.plugin_slug, name: s.name }))
+  return allSkills().map(s => ({ plugin: s.plugin_slug, name: skillUrlName(s.name) }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${title} | ${siteConfig.name}`,
     description: skill.description ?? "",
-    alternates: { canonical: `${siteConfig.baseUrl}/skills/${plugin}/${name}` },
+    alternates: { canonical: `${siteConfig.baseUrl}${skillPath(skill)}` },
     openGraph: { title, description: skill.description ?? "", type: "article" },
   }
 }
@@ -30,6 +31,10 @@ export default async function SkillPage({ params }: Props) {
   const { plugin, name } = await params
   const skill = getSkill(plugin, name)
   if (!skill) notFound()
+  // Old raw display-name form (e.g. "Paper Q&A") -> permanent redirect to the URL-safe form.
+  let requested = name
+  try { requested = decodeURIComponent(name) } catch { /* keep raw */ }
+  if (requested !== skillUrlName(skill.name)) permanentRedirect(skillPath(skill))
 
   const installCmd = `/plugin install ${skill.plugin_slug}`
   const related: Skill[] = skill.related_slugs
@@ -99,7 +104,7 @@ export default async function SkillPage({ params }: Props) {
           <ul className="related-list">
             {related.map(r => (
               <li key={r.slug}>
-                <Link href={`/skills/${r.plugin_slug}/${r.name}`}>{r.plugin_slug}/{r.name}</Link>
+                <Link href={skillPath(r)}>{r.plugin_slug}/{r.name}</Link>
                 <span className="related-desc">— {r.description ?? ""}</span>
               </li>
             ))}
@@ -118,7 +123,7 @@ export default async function SkillPage({ params }: Props) {
             "applicationCategory": "DeveloperApplication",
             "operatingSystem": "Cross-platform",
             "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-            "url": `${siteConfig.baseUrl}/skills/${skill.plugin_slug}/${skill.name}`,
+            "url": `${siteConfig.baseUrl}${skillPath(skill)}`,
             ...(skill.github.stars > 0 && {
               "aggregateRating": {
                 "@type": "AggregateRating",

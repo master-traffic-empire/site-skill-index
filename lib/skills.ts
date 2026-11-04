@@ -1,4 +1,5 @@
 import indexData from "../content/skills-index.json"
+import { skillUrlName } from "./skill-url"
 
 export interface Skill {
   slug: string
@@ -46,7 +47,10 @@ export function allSkills(): Skill[] {
 }
 
 export function getSkill(pluginSlug: string, name: string): Skill | undefined {
-  return index.records.find(r => r.plugin_slug === pluginSlug && r.name === name)
+  let n = name
+  try { n = decodeURIComponent(name) } catch { /* keep raw */ }
+  // Accept the display name (article refs) or its URL form (route params).
+  return index.records.find(r => r.plugin_slug === pluginSlug && (r.name === n || skillUrlName(r.name) === n))
 }
 
 export function allPlugins(): Plugin[] {

@@ -17,6 +17,7 @@ import { allArticles } from "../lib/articles"
 import { personaCopy } from "../content/persona-copy"
 import { SkillSearch } from "../components/SkillSearch"
 import { SectionLabel } from "../components/SectionLabel"
+import { skillPath } from "../lib/skill-url"
 
 export const metadata: Metadata = {
   title: `${siteConfig.name} — ${siteConfig.tagline}`,
@@ -41,7 +42,7 @@ function RankRow({ n, skill }: { n: number; skill: Skill }) {
     <li className="rank-row">
       <span className="rank-n">{n.toString().padStart(2, "0")}</span>
       <div className="rank-body">
-        <Link href={`/skills/${skill.plugin_slug}/${skill.name}`}>
+        <Link href={skillPath(skill)}>
           <span className="rank-title">{skill.name}</span>
           <span className="rank-plugin">{skill.plugin_slug}</span>
         </Link>
@@ -172,7 +173,7 @@ export default async function Home() {
                 <ul className="trade-prev">
                   {preview.map(s => (
                     <li key={s.slug}>
-                      <Link href={`/skills/${s.plugin_slug}/${s.name}`}>
+                      <Link href={skillPath(s)}>
                         <span className="mono-slug">{s.plugin_slug}/{s.name}</span>
                       </Link>
                     </li>
@@ -204,7 +205,7 @@ export default async function Home() {
                 <ul className="func-prev">
                   {preview.map(s => (
                     <li key={s.slug}>
-                      <Link href={`/skills/${s.plugin_slug}/${s.name}`} className="mono-slug">{s.name}</Link>
+                      <Link href={skillPath(s)} className="mono-slug">{s.name}</Link>
                     </li>
                   ))}
                 </ul>
@@ -308,7 +309,7 @@ export default async function Home() {
             "itemListElement": trending.slice(0, 5).map((s, i) => ({
               "@type": "ListItem",
               "position": i + 1,
-              "url": `${siteConfig.baseUrl}/skills/${s.plugin_slug}/${s.name}`,
+              "url": `${siteConfig.baseUrl}${skillPath(s)}`,
               "name": `${s.plugin_slug}/${s.name}`,
             })),
           },

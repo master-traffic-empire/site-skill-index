@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { getSkill } from "../lib/skills"
+import { skillPath } from "../lib/skill-url"
 
 export function ArticleSkillCard({
   pluginSlug,
@@ -19,7 +20,7 @@ export function ArticleSkillCard({
       )}
       <div className="art-skill-head">
         <h3>
-          <Link href={`/skills/${pluginSlug}/${name}`}>
+          <Link href={skillPath(skill)}>
             <span className="sref-plugin">{pluginSlug}</span>
             <span className="sref-sep">/</span>
             <span className="sref-name">{name}</span>

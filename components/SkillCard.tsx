@@ -1,9 +1,10 @@
 import Link from "next/link"
 import type { Skill } from "../lib/skills"
+import { skillPath } from "../lib/skill-url"
 
 export function SkillCard({ skill }: { skill: Skill }) {
   return (
-    <Link href={`/skills/${skill.plugin_slug}/${skill.name}`} className="card">
+    <Link href={skillPath(skill)} className="card">
       <div className="card-head">
         <span className="card-name">{skill.name}</span>
         {skill.verified && <span className="tag tag-ok">OK</span>}

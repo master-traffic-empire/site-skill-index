@@ -1,5 +1,6 @@
 import { siteConfig } from "../../site.config"
 import { allSkills, generatedAt } from "../../lib/skills"
+import { skillPath } from "../../lib/skill-url"
 
 export async function GET() {
   const items = allSkills()
@@ -14,8 +15,8 @@ export async function GET() {
 <id>${siteConfig.baseUrl}/</id>
 ${items.map(s => `<entry>
   <title>${s.plugin_slug}/${s.name}</title>
-  <link href="${siteConfig.baseUrl}/skills/${s.plugin_slug}/${s.name}"/>
-  <id>${siteConfig.baseUrl}/skills/${s.plugin_slug}/${s.name}</id>
+  <link href="${siteConfig.baseUrl}${skillPath(s)}"/>
+  <id>${siteConfig.baseUrl}${skillPath(s)}</id>
   <updated>${s.github.last_commit_at ?? generatedAt()}</updated>
   <summary><![CDATA[${s.description ?? ""}]]></summary>
 </entry>`).join("\n")}
