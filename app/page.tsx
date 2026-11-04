@@ -12,6 +12,7 @@ import {
   skillsForBusinessCategory,
   generatedAt,
   type Skill,
+  toCardData,
 } from "../lib/skills"
 import { allArticles } from "../lib/articles"
 import { personaCopy } from "../content/persona-copy"
@@ -108,7 +109,7 @@ export default async function Home() {
         </h1>
         <p className="mast-sub">A working directory of every Claude Code skill, slash command, and plugin in the open-source wild. Updated daily by a pipeline — indexed, classified, searchable.</p>
         <div className="mast-search-wrap">
-          <SkillSearch skills={skills} />
+          <SkillSearch skills={skills.map(toCardData)} />
         </div>
       </header>
 

@@ -1,9 +1,9 @@
 "use client"
 import { useState, useMemo } from "react"
-import type { Skill } from "../lib/skills"
+import type { SkillCardData } from "../lib/skills"
 import { SkillCard } from "./SkillCard"
 
-export function SkillSearch({ skills }: { skills: Skill[] }) {
+export function SkillSearch({ skills }: { skills: SkillCardData[] }) {
   const [q, setQ] = useState("")
   const filtered = useMemo(() => {
     if (!q.trim()) return skills

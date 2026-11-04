@@ -31,6 +31,28 @@ export interface Skill {
   business_category: string | null
 }
 
+/**
+ * The slice of a Skill that SkillSearch / SkillCard actually read: search matches on
+ * name, description, plugin_slug; the card renders those plus verified, type and
+ * github.stars; slug is the React key. Passing full Skill objects into the client
+ * SkillSearch serialized every readme_markdown into the page (~7 MB home page, #95).
+ */
+export type SkillCardData = Pick<Skill, "slug" | "name" | "plugin_slug" | "description" | "verified" | "type"> & {
+  github: { stars: number }
+}
+
+export function toCardData(s: Skill): SkillCardData {
+  return {
+    slug: s.slug,
+    name: s.name,
+    plugin_slug: s.plugin_slug,
+    description: s.description,
+    verified: s.verified,
+    type: s.type,
+    github: { stars: s.github.stars },
+  }
+}
+
 export interface Plugin {
   slug: string
   repo: string

@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { siteConfig } from "../../site.config"
-import { allSkills } from "../../lib/skills"
+import { allSkills, toCardData } from "../../lib/skills"
 import { SkillSearch } from "../../components/SkillSearch"
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function SkillsIndex() {
       <p className="idx-sub">
         <span className="amber">{skills.length}</span> indexed // every claude code skill &amp; slash command
       </p>
-      <SkillSearch skills={skills} />
+      <SkillSearch skills={skills.map(toCardData)} />
     </main>
   )
 }
